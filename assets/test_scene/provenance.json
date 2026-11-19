@@ -1,0 +1,20 @@
+{
+  "status": "provisional_technical_test_only",
+  "canon_approved": false,
+  "generated_date": "2026-10-21",
+  "generator": "image_gen.imagegen",
+  "mode": "built-in generate",
+  "prompt": "Use case: illustration-story\nAsset type: provisional technical test still for image-to-video animation; not approved fictional canon\nPrimary request: Create one cozy, quiet small reading room at night with one adult person seated reading an open book, both hands resting naturally on the book, a ceramic tea cup on a small nearby table, a softly lit desk lamp, and a rain-streaked window.\nStyle/medium: clean painted illustration with subtle pixel-art-inspired crisp simplified shapes, restrained surface texture, readable silhouette, stable straight furniture geometry.\nComposition/framing: portrait 4:5 aspect ratio. A fixed medium-wide camera includes the seated adult from head to shoes, the whole chair, nearby table, lamp, and rain-streaked window. Natural three-quarter view of the adult, visible calm face and both eyes, believable adult proportions, relaxed shoulders. Keep the face large enough to support a subtle blink animation and torso readable enough for gentle breathing.\nLighting/mood: soft warm lamp light inside, cool dark nighttime light at the window, calm and understated.\nConstraints: exactly one adult, one open book, one cup, simple coherent room, hands anatomically plausible and resting still. This is a neutral animation test scene. No named world motifs. No text, lettering, signage, logos, watermark, panel borders, motion blur, or motion lines. Opaque background. No changes of camera or multiple frames.",
+  "source_path": "C:\\Users\\thisi\\.codex\\generated_images\\01a15d08-4d12-79a2-bd70-b664c33fffc8\\exec-26e08cd7-6299-4854-91b3-9e7bd44729c6.png",
+  "notes": [
+    "One adult seated reading; hands and both eyes visible.",
+    "Warm lamp, ceramic cup, rain-streaked window, coherent chair and table geometry.",
+    "Generated composition includes a sleeping cat, plants, bookshelf and wall art as background furnishings.",
+    "Technical test image only; no fictional names, lore or canon claims.",
+    "No image edits or resizing performed; use workflow resize for H3 test dimensions."
+  ],
+  "sha256": "e70c46495714adb4703d7e9c433ec84f76ed96db72f427da4ee0aa3278d17caa",
+  "width": 1122,
+  "height": 1402,
+  "path": "assets/test_scene/test_still.png"
+}

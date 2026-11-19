@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "fixture": true,
+  "notice": "Synthetic metadata demo only; no creator canon, real animation, or approval claims.",
+  "world": {
+    "id": "FIXTURE_WORLD",
+    "title": "Offline test world (provisional fixture)",
+    "canon_revision": 0,
+    "facts": {}
+  },
+  "locations": [
+    {
+      "id": "FIXTURE_ROOM",
+      "world_id": "FIXTURE_WORLD",
+      "title": "Synthetic fixture room",
+      "adjacent_location_ids": []
+    }
+  ],
+  "entities": [
+    {
+      "id": "READER",
+      "world_id": "FIXTURE_WORLD",
+      "kind": "human",
+      "label": "Fixture reader",
+      "location_ids": [
+        "FIXTURE_ROOM"
+      ]
+    },
+    {
+      "id": "CUP",
+      "world_id": "FIXTURE_WORLD",
+      "kind": "object",
+      "label": "Fixture cup",
+      "location_ids": [
+        "FIXTURE_ROOM"
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SCENE_A",
+      "world_id": "FIXTURE_WORLD",
+      "location_id": "FIXTURE_ROOM",
+      "master": {
+        "id": "MASTER_A",
+        "path": "master_fixture.ppm",
+        "sha256": "86afe7532c63f6510ed50e20ae2d2933837f7207c952cc7be4096c3916c69b6a"
+      },
+      "present_entities": [
+        "READER",
+        "CUP"
+      ],
+      "initial_state": {
+        "READER": {
+          "pose": "seated_reading"
+        },
+        "CUP": {
+          "position": "on_table"
+        }
+      },
+      "initial_anchor": "SEATED_MASTER",
+      "anchors": [
+        {
+          "id": "SEATED_MASTER",
+          "hold_safe": true
+        }
+      ],
+      "restrictions": [
+        "Locked camera and composition",
+        "Fixture only; never treat mock metadata as reviewed media"
+      ]
+    }
+  ],
+  "behaviors": [
+    {
+      "id": "READ_IDLE",
+      "scene_id": "SCENE_A",
+      "actor_id": "READER",
+      "kind": "idle",
+      "preconditions": {
+        "READER": {
+          "pose": "seated_reading"
+        },
+        "CUP": {
+          "position": "on_table"
+        }
+      },
+      "state_effects": {
+        "READER": {
+          "pose": "seated_reading"
+        },
+        "CUP": {
+          "position": "on_table"
+        }
+      },
+      "weight": 4.0,
+      "cooldown_frames": 240,
+      "min_gap_frames": 360,
+      "initial_delay_frames": 120,
+      "time_windows": [],
+      "resources": [
+        "actor.READER",
+        "frame.full_scene"
+      ]
+    },
+    {
+      "id": "SIP_TEA",
+      "scene_id": "SCENE_A",
+      "actor_id": "READER",
+      "kind": "action",
+      "preconditions": {
+        "READER": {
+          "pose": "seated_reading"
+        },
+        "CUP": {
+          "position": "on_table"
+        }
+      },
+      "state_effects": {
+        "READER": {
+          "pose": "seated_reading"
+        },
+        "CUP": {
+          "position": "on_table"
+        }
+      },
+      "weight": 2.0,
+      "cooldown_frames": 2160,
+      "min_gap_frames": 1440,
+      "initial_delay_frames": 1440,
+      "time_windows": [
+        {
+          "start_frame": 1200,
+          "end_frame": 14400
+        }
+      ],
+      "resources": [
+        "actor.READER",
+        "prop.CUP",
+        "frame.full_scene"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": "READ_IDLE_01",
+      "behavior_id": "READ_IDLE",
+      "scene_id": "SCENE_A",
+      "master_id": "MASTER_A",
+      "master_sha256": "86afe7532c63f6510ed50e20ae2d2933837f7207c952cc7be4096c3916c69b6a",
+      "media": {
+        "kind": "mock",
+        "label": "NO REAL VIDEO - fixture metadata only"
+      },
+      "fps": 24,
+      "duration_frames": 96,
+      "start_anchor": "SEATED_MASTER",
+      "end_anchor": "SEATED_MASTER",
+      "start_state": {
+        "READER": {
+          "pose": "seated_reading"
+        },
+        "CUP": {
+          "position": "on_table"
+        }
+      },
+      "end_state": {
+        "READER": {
+          "pose": "seated_reading"
+        },
+        "CUP": {
+          "position": "on_table"
+        }
+      },
+      "status": "approved",
+      "weight": 1.0,
+      "provenance": {
+        "generator": "fixture",
+        "review_note": "Synthetic test approval only; never a creator review",
+        "workflow": null
+      }
+    },
+    {
+      "id": "READ_IDLE_02",
+      "behavior_id": "READ_IDLE",
+      "scene_id": "SCENE_A",
+      "master_id": "MASTER_A",
+      "master_sha256": "86afe7532c63f6510ed50e20ae2d2933837f7207c952cc7be4096c3916c69b6a",
+      "media": {
+        "kind": "mock",
+        "label": "NO REAL VIDEO - fixture metadata only"
+      },
+      "fps": 24,
+      "duration_frames": 96,
+      "start_anchor": "SEATED_MASTER",
+      "end_anchor": "SEATED_MASTER",
+      "start_state": {
+        "READER": {
+          "pose": "seated_reading"
+        },
+        "CUP": {
+          "position": "on_table"
+        }
+      },
+      "end_state": {
+        "READER": {
+          "pose": "seated_reading"
+        },
+        "CUP": {
+          "position": "on_table"
+        }
+      },
+      "status": "approved",
+      "weight": 1.0,
+      "provenance": {
+        "generator": "fixture",
+        "review_note": "Synthetic test approval only; never a creator review",
+        "workflow": null
+      }
+    },
+    {
+      "id": "READ_IDLE_03",
+      "behavior_id": "READ_IDLE",
+      "scene_id": "SCENE_A",
+      "master_id": "MASTER_A",
+      "master_sha256": "86afe7532c63f6510ed50e20ae2d2933837f7207c952cc7be4096c3916c69b6a",
+      "media": {
+        "kind": "mock",
+        "label": "NO REAL VIDEO - fixture metadata only"
+      },
+      "fps": 24,
+      "duration_frames": 96,
+      "start_anchor": "SEATED_MASTER",
+      "end_anchor": "SEATED_MASTER",
+      "start_state": {
+        "READER": {
+          "pose": "seated_reading"
+        },
+        "CUP": {
+          "position": "on_table"
+        }
+      },
+      "end_state": {
+        "READER": {
+          "pose": "seated_reading"
+        },
+        "CUP": {
+          "position": "on_table"
+        }
+      },
+      "status": "approved",
+      "weight": 1.0,
+      "provenance": {
+        "generator": "fixture",
+        "review_note": "Synthetic test approval only; never a creator review",
+        "workflow": null
+      }
+    },
+    {
+      "id": "SIP_TEA_01",
+      "behavior_id": "SIP_TEA",
+      "scene_id": "SCENE_A",
+      "master_id": "MASTER_A",
+      "master_sha256": "86afe7532c63f6510ed50e20ae2d2933837f7207c952cc7be4096c3916c69b6a",
+      "media": {
+        "kind": "mock",
+        "label": "NO REAL VIDEO - fixture metadata only"
+      },
+      "fps": 24,
+      "duration_frames": 144,
+      "start_anchor": "SEATED_MASTER",
+      "end_anchor": "SEATED_MASTER",
+      "start_state": {
+        "READER": {
+          "pose": "seated_reading"
+        },
+        "CUP": {
+          "position": "on_table"
+        }
+      },
+      "end_state": {
+        "READER": {
+          "pose": "seated_reading"
+        },
+        "CUP": {
+          "position": "on_table"
+        }
+      },
+      "status": "approved",
+      "weight": 1.0,
+      "provenance": {
+        "generator": "fixture",
+        "review_note": "Synthetic test approval only; never a creator review",
+        "workflow": null
+      }
+    },
+    {
+      "id": "SIP_TEA_02",
+      "behavior_id": "SIP_TEA",
+      "scene_id": "SCENE_A",
+      "master_id": "MASTER_A",
+      "master_sha256": "86afe7532c63f6510ed50e20ae2d2933837f7207c952cc7be4096c3916c69b6a",
+      "media": {
+        "kind": "mock",
+        "label": "NO REAL VIDEO - fixture metadata only"
+      },
+      "fps": 24,
+      "duration_frames": 144,
+      "start_anchor": "SEATED_MASTER",
+      "end_anchor": "SEATED_MASTER",
+      "start_state": {
+        "READER": {
+          "pose": "seated_reading"
+        },
+        "CUP": {
+          "position": "on_table"
+        }
+      },
+      "end_state": {
+        "READER": {
+          "pose": "seated_reading"
+        },
+        "CUP": {
+          "position": "on_table"
+        }
+      },
+      "status": "approved",
+      "weight": 1.0,
+      "provenance": {
+        "generator": "fixture",
+        "review_note": "Synthetic test approval only; never a creator review",
+        "workflow": null
+      }
+    }
+  ],
+  "episodes": [
+    {
+      "id": "FIXTURE_EPISODE",
+      "world_id": "FIXTURE_WORLD",
+      "world_revision": 0,
+      "scene_id": "SCENE_A",
+      "status": "draft",
+      "in_world_time": "FIXTURE_TIME_UNSET",
+      "seed": 7,
+      "fps": 24,
+      "duration_frames": 14400
+    }
+  ],
+  "canon_patches": [
+    {
+      "id": "FIXTURE_EMPTY_PATCH",
+      "world_id": "FIXTURE_WORLD",
+      "episode_id": "FIXTURE_EPISODE",
+      "base_revision": 0,
+      "status": "draft",
+      "proposed_changes": []
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "schema": "director.compilation.v0",
+  "book_sha256": "5e8e3db5c4ca8ddcb3b049ef5086b29d40f18a7a8d56c8bcbeaf627f2683e2f1",
+  "mode": "dry_run_only",
+  "can_submit": false,
+  "warning": "Projection is not a save request: real sequence revisions, references and approvals must be resolved.",
+  "slots": [
+    {
+      "id": "plannedshot.ef5180f7f30551c6809716460eeb05cf",
+      "label": "S01 promise",
+      "brief": "Medium, locked camera, eye level. Caretaker turns the old lamp on; it flickers out. Sound: Switch click, electrical sputter, room wind.",
+      "start_frame": 0,
+      "end_frame": 120,
+      "first_frame_id": null,
+      "last_frame_id": null
+    },
+    {
+      "id": "plannedshot.51aa0b8796ce54f7a77f4fc5ab1da34d",
+      "label": "S02 clue",
+      "brief": "Insert, same side of desk axis. Her hand opens a shallow tray, exposing one brass fuse. Sound: Wooden tray scrape.",
+      "start_frame": 120,
+      "end_frame": 240,
+      "first_frame_id": null,
+      "last_frame_id": null
+    },
+    {
+      "id": "plannedshot.ac3ade9a4fad50acaf53c0245c95e7bc",
+      "label": "S03 decision",
+      "brief": "Medium close, same screen direction. She picks up the fuse and examines its intact filament. Sound: Coat fabric, wind.",
+      "start_frame": 240,
+      "end_frame": 360,
+      "first_frame_id": null,
+      "last_frame_id": null
+    },
+    {
+      "id": "plannedshot.170f3c6df9d35ce19e20913228f0d773",
+      "label": "S04 action",
+      "brief": "Close on hands and opened lamp base. She seats the fuse in the socket. Sound: Metal contact click.",
+      "start_frame": 360,
+      "end_frame": 480,
+      "first_frame_id": null,
+      "last_frame_id": null
+    },
+    {
+      "id": "plannedshot.353ce05ec3c55392a20c26a6bec5653d",
+      "label": "S05 payoff",
+      "brief": "Return to opening setup. She turns the lamp on; warm steady light fills the desk. Sound: Switch click, quiet hum.",
+      "start_frame": 480,
+      "end_frame": 600,
+      "first_frame_id": null,
+      "last_frame_id": null
+    },
+    {
+      "id": "plannedshot.0c0450e67b1c56919c314cbb95f9dca5",
+      "label": "S06 meaning",
+      "brief": "Wider view through the window. She sits beside the light while a distant boat passes in the dark. Sound: Distant boat engine, wind softens.",
+      "start_frame": 600,
+      "end_frame": 720,
+      "first_frame_id": null,
+      "last_frame_id": null
+    }
+  ],
+  "jobs": [
+    {
+      "shot_id": "S01",
+      "content_sha256": "c1390e90d7f722f6e5384647cd6853ca344ed4087578357802db087116e9f7ce",
+      "requested_frames": 120,
+      "prompt_candidate": "Medium, locked camera, eye level. Caretaker turns the old lamp on; it flickers out. Sound: Switch click, electrical sputter, room wind.",
+      "status": "dry_run_only",
+      "submitted": false
+    },
+    {
+      "shot_id": "S02",
+      "content_sha256": "2ddfbb2ab54910a4e552a5cda6e5351c271a945db1e64ece3eff05f6beb78518",
+      "requested_frames": 120,
+      "prompt_candidate": "Insert, same side of desk axis. Her hand opens a shallow tray, exposing one brass fuse. Sound: Wooden tray scrape.",
+      "status": "dry_run_only",
+      "submitted": false
+    },
+    {
+      "shot_id": "S03",
+      "content_sha256": "a0f6291b42a33c5127aa90c48d1ee615dc127e2e98b65c1402b3fa6178b68a65",
+      "requested_frames": 120,
+      "prompt_candidate": "Medium close, same screen direction. She picks up the fuse and examines its intact filament. Sound: Coat fabric, wind.",
+      "status": "dry_run_only",
+      "submitted": false
+    },
+    {
+      "shot_id": "S04",
+      "content_sha256": "79a78f8d940a5591b1a07437e500864ae0cb84ada9b6eec915d50418dfe854cd",
+      "requested_frames": 120,
+      "prompt_candidate": "Close on hands and opened lamp base. She seats the fuse in the socket. Sound: Metal contact click.",
+      "status": "dry_run_only",
+      "submitted": false
+    },
+    {
+      "shot_id": "S05",
+      "content_sha256": "06262c94132ed4025d8d7f944ae12a0f275597098440dd8ae37250dd0228a6ac",
+      "requested_frames": 120,
+      "prompt_candidate": "Return to opening setup. She turns the lamp on; warm steady light fills the desk. Sound: Switch click, quiet hum.",
+      "status": "dry_run_only",
+      "submitted": false
+    },
+    {
+      "shot_id": "S06",
+      "content_sha256": "d7ad2ddb12ddde95a4ca817c6e0226da1747e80b1862637cb9cb7df5ff46dac4",
+      "requested_frames": 120,
+      "prompt_candidate": "Wider view through the window. She sits beside the light while a distant boat passes in the dark. Sound: Distant boat engine, wind softens.",
+      "status": "dry_run_only",
+      "submitted": false
+    }
+  ],
+  "blockers": [
+    {
+      "shot_id": "S01",
+      "reasons": [
+        "First-frame reference unresolved",
+        "Shot plan remains unapproved"
+      ]
+    },
+    {
+      "shot_id": "S02",
+      "reasons": [
+        "First-frame reference unresolved",
+        "Shot plan remains unapproved"
+      ]
+    },
+    {
+      "shot_id": "S03",
+      "reasons": [
+        "First-frame reference unresolved",
+        "Shot plan remains unapproved"
+      ]
+    },
+    {
+      "shot_id": "S04",
+      "reasons": [
+        "First-frame reference unresolved",
+        "Shot plan remains unapproved"
+      ]
+    },
+    {
+      "shot_id": "S05",
+      "reasons": [
+        "First-frame reference unresolved",
+        "Shot plan remains unapproved"
+      ]
+    },
+    {
+      "shot_id": "S06",
+      "reasons": [
+        "First-frame reference unresolved",
+        "Shot plan remains unapproved"
+      ]
+    },
+    {
+      "scope": "film",
+      "reasons": [
+        "Final audio master unresolved"
+      ]
+    }
+  ]
+}

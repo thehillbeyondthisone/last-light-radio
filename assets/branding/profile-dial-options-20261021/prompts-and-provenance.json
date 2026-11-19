@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-21",
+  "mode": "Built-in image_gen.imagegen",
+  "status": "Proposed channel profile-picture directions for creator selection",
+  "reference": {
+    "role": "Banner visual style and palette reference only",
+    "persistent_workspace_copy": "assets/branding/banner-options-20261021/03-analog-last-light.png",
+    "supplied_path": "C:/Users/thisi/AppData/Local/Temp/codex-clipboard-5149ed3b-8f16-4d7a-923e-82bf5703e84d.png"
+  },
+  "options": [
+    {
+      "slug": "01-classic-sweep-dial",
+      "name": "Classic Sweep",
+      "prompt": "Use case: logo-brand. Asset type: Last Light Radio YouTube channel profile picture.\nInput image 1: visual style and color reference ONLY, the creator's selected Last Light Radio banner. Create a NEW square avatar, do not edit the banner.\nMatch the reference closely: ink midnight navy, aged warm ivory, honey amber light, subtle antique print grain, restrained cinematic glow, quiet late-night analog-radio mood. Limited palette, tasteful minimal identity, no chrome, no modern app icon gloss. The avatar should feel designed as part of exactly the same identity as this banner.\nOutput ONE square image, 1024 x 1024 requested, edge-to-edge opaque midnight navy background. This is the actual avatar artwork, no contact sheet, labels, mockup or surrounding layout. Design for a circular crop: every meaningful detail fits inside a circle centered at (512,512), radius 390. Main symbol large and bold enough to recognize when displayed at 48 pixels. Texture subtle and subordinate to shape. Strong silhouette, few thick deliberate elements, elegant negative space.\nNO letters, words, initials, numbers, frequencies, clock numerals, motto, station name, music notes, headphones, characters, watermarks or additional badges. A radio tuning symbol, not a clock or compass.\nDIRECTION: a beautifully balanced vintage circular radio tuning dial seen directly from the front. A single warm ivory 270-degree arc open at the bottom, about 28px thick at this canvas size, with a restrained set of roughly 11 chunky inward tuning ticks, every third tick longer. One long luminous amber tuning needle extends from a simple amber hub up toward the upper-right arc at roughly two o'clock, with a soft localized warm bloom where it reaches the arc. Only ONE needle. The inner face is dark navy and open. Warm ivory arc, amber needle, soft smoky antique texture. No text anywhere. Express nighttime radio with a bold timeless emblem, not literal machinery or an instrument dashboard.",
+      "file": "01-classic-sweep-dial.png",
+      "actual_dimensions": [
+        1254,
+        1254
+      ],
+      "source_filename": "exec-df8e3654-12be-4d56-8f47-05d9cb820abc.png"
+    },
+    {
+      "slug": "02-horizontal-tuner",
+      "name": "Midnight Signal",
+      "prompt": "Use case: logo-brand. Asset type: Last Light Radio YouTube channel profile picture.\nInput image 1: visual style and color reference ONLY, the creator's selected Last Light Radio banner. Create a NEW square avatar, do not edit the banner.\nMatch the reference closely: ink midnight navy, aged warm ivory, honey amber light, subtle antique print grain, restrained cinematic glow, quiet late-night analog-radio mood. Limited palette, tasteful minimal identity, no chrome, no modern app icon gloss. The avatar should feel designed as part of exactly the same identity as this banner.\nOutput ONE square image, 1024 x 1024 requested, edge-to-edge opaque midnight navy background. This is the actual avatar artwork, no contact sheet, labels, mockup or surrounding layout. Design for a circular crop: every meaningful detail fits inside a circle centered at (512,512), radius 390. Main symbol large and bold enough to recognize when displayed at 48 pixels. Texture subtle and subordinate to shape. Strong silhouette, few thick deliberate elements, elegant negative space.\nNO letters, words, initials, numbers, frequencies, clock numerals, motto, station name, music notes, headphones, characters, watermarks or additional badges. A radio tuning symbol, not a clock or compass.\nDIRECTION: a minimal horizontal analog tuning scale translated directly from the reference banner into a compact circular profile emblem. Centered slightly above the square's vertical middle, a straight warm-ivory horizontal scale stretches about 640px across, with 7 substantial vertical tuning ticks of different deliberate heights. A single strong amber vertical tuning needle crosses the line at about 60% of the scale's width, ending in a tiny bright honey-colored intersection with a controlled halo that echoes the glowing point in the banner. No enclosing ring, generous dark negative space. Below the dial, across the lower third of the circle, a sparse dark skyline silhouette with three tiny amber windows echoes the banner, kept large and graphic with just five simple rooftops and little detail. The tuning scale is the dominant symbol; skyline very secondary. No lettering, numbers or sparkly four-point stars. Calm, refined, instantly legible. The dial and skyline are centered as a compact group within the circular crop.",
+      "file": "02-horizontal-tuner.png",
+      "actual_dimensions": [
+        1254,
+        1254
+      ],
+      "source_filename": "exec-4b29ee71-7d46-4a90-b85f-c4cc902c05bf.png"
+    },
+    {
+      "slug": "03-half-moon-receiver",
+      "name": "Half-Moon Receiver",
+      "prompt": "Use case: logo-brand. Asset type: Last Light Radio YouTube channel profile picture.\nInput image 1: visual style and color reference ONLY, the creator's selected Last Light Radio banner. Create a NEW square avatar, do not edit the banner.\nMatch the reference closely: ink midnight navy, aged warm ivory, honey amber light, subtle antique print grain, restrained cinematic glow, quiet late-night analog-radio mood. Limited palette, tasteful minimal identity, no chrome, no modern app icon gloss. The avatar should feel designed as part of exactly the same identity as this banner.\nOutput ONE square image, 1024 x 1024 requested, edge-to-edge opaque midnight navy background. This is the actual avatar artwork, no contact sheet, labels, mockup or surrounding layout. Design for a circular crop: every meaningful detail fits inside a circle centered at (512,512), radius 390. Main symbol large and bold enough to recognize when displayed at 48 pixels. Texture subtle and subordinate to shape. Strong silhouette, few thick deliberate elements, elegant negative space.\nNO letters, words, initials, numbers, frequencies, clock numerals, motto, station name, music notes, headphones, characters, watermarks or additional badges. A radio tuning symbol, not a clock or compass.\nDIRECTION: a bold semicircular 1940s radio receiver tuning gauge as a compact brand emblem, not a physical product photograph. One thick warm ivory upper semicircle, open below, with 9 large inward tick marks following the arc. A long single amber triangular needle rises diagonally from a simple central pivot near the lower middle, toward the upper-left middle of the arc, with warm subtle bloom. A short understated amber horizontal baseline grounds the gauge. Center the whole half-moon silhouette within the circular crop so it has substantial scale and presence, about 700px wide and 500px high. Deep navy dial face, warm cream scale, copper shadow at the base, light aged print grain matching the banner. Minimal geometric construction with a hint of old screen-printed radio graphics. No words, digits, lettering, extra hands or extra objects. A refined radio-station emblem with warm nocturnal atmosphere.",
+      "file": "03-half-moon-receiver.png",
+      "actual_dimensions": [
+        1254,
+        1254
+      ],
+      "source_filename": "exec-d37680b7-74ce-4f32-b1a0-d876302e8c58.png"
+    }
+  ]
+}

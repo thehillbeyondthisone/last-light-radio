@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "confirmed": true,
+  "workflow_sha256": "020683e17945a85c24a50df815027ace1946e89f9bb359eac757633de92ab839",
+  "inputs": {
+    "first_image": {
+      "node_id": "5",
+      "class_type": "LoadImage",
+      "input": "image",
+      "type": "STRING"
+    },
+    "last_image": {
+      "node_id": "15",
+      "class_type": "LoadImage",
+      "input": "image",
+      "type": "STRING"
+    },
+    "motion_prompt": {
+      "node_id": "7",
+      "class_type": "MiniMaxH3ImageToVideo",
+      "input": "prompt",
+      "type": "STRING"
+    },
+    "width": {
+      "node_id": "7",
+      "class_type": "MiniMaxH3ImageToVideo",
+      "input": "width",
+      "type": "INT"
+    },
+    "height": {
+      "node_id": "7",
+      "class_type": "MiniMaxH3ImageToVideo",
+      "input": "height",
+      "type": "INT"
+    },
+    "frames": {
+      "node_id": "7",
+      "class_type": "MiniMaxH3ImageToVideo",
+      "input": "length",
+      "type": "INT"
+    },
+    "seed": {
+      "node_id": "11",
+      "class_type": "RandomNoise",
+      "input": "noise_seed",
+      "type": "INT"
+    },
+    "filename_prefix": {
+      "node_id": "14",
+      "class_type": "SaveImage",
+      "input": "filename_prefix",
+      "type": "STRING"
+    },
+    "vae_name": {
+      "node_id": "3",
+      "class_type": "VAELoader",
+      "input": "vae_name",
+      "type": "STRING"
+    }
+  },
+  "output": {
+    "node_id": "14",
+    "class_type": "SaveImage",
+    "parser": "images_png_sequence"
+  },
+  "confirmation": "Creator requested restoration of this recovered production pipeline on 2026-10-21."
+}

@@ -1,0 +1,77 @@
+/* Keyboard Layout window. Shares the editor's FCP7 grey palette. */
+.kl-dialog{--kl-play:#9fc0dd;--kl-nav:#b3cfa0;--kl-mark:#e7c98c;--kl-edit:#e0a9a3;--kl-time:#c5b2dc;--kl-win:#c3c8cf;
+  width:min(1060px,calc(100vw - 32px));max-height:calc(100dvh - 32px);padding:0;border:1px solid #555b65;border-radius:5px;
+  background:#b5b8bd;color:#25272b;font:11px/1.35 "Segoe UI",Arial,sans-serif;box-shadow:0 18px 50px #0007;overflow:hidden}
+.kl-dialog[open]{display:flex;flex-direction:column}
+.kl-dialog::backdrop{background:#1e222a80}
+.kl-dialog button{font:inherit;color:inherit;min-height:22px;padding:2px 8px;border:1px solid #7c838c;border-radius:3px;background:linear-gradient(#e2e4e8,#b9bec6);cursor:pointer}
+.kl-dialog button:hover:not(:disabled){background:linear-gradient(#eef0f3,#c8ccd3)}
+.kl-dialog button:disabled{opacity:.45;cursor:default}
+.kl-dialog button[aria-pressed=true]{background:linear-gradient(#9fb2c8,#c2d0df);border-color:#56677c;box-shadow:inset 0 1px 2px #0003}
+.kl-dialog :focus-visible{outline:2px solid #2f6db3;outline-offset:1px}
+.kl-dialog .kl-primary{background:linear-gradient(#e1cfaa,#baa377);border-color:#82724f}
+.kl-titlebar{display:flex;align-items:center;gap:12px;padding:4px 6px 4px 10px;background:linear-gradient(#aaaeb7,#777e8c);color:#f3f0e8;text-shadow:0 1px #30364180}
+.kl-titlebar strong{font-size:12px}
+.kl-titlebar span{flex:1;opacity:.92}
+.kl-dialog .kl-titlebar button{min-width:24px;padding:0 6px;font-size:14px;line-height:1;text-shadow:none}
+.kl-toolbar{display:flex;align-items:center;gap:6px;padding:6px 8px;border-bottom:1px solid #8c929d;flex-wrap:wrap}
+.kl-search{flex:1 1 220px}
+.kl-search input{width:100%;box-sizing:border-box;font:inherit;padding:3px 6px;border:1px solid #7c838c;border-radius:3px;background:#eef0f2}
+.kl-check{display:flex;align-items:center;gap:4px;white-space:nowrap}
+.kl-dialog .kl-filter-chip{display:flex;align-items:center;gap:4px}
+.kl-board{padding:6px 8px 4px;background:#a3a8b0;border-bottom:1px solid #7f858f}
+.kl-mods{display:flex;gap:3px;margin-bottom:5px;flex-wrap:wrap}
+.kl-dialog .kl-mods button{min-height:19px;padding:1px 7px;font-size:10px}
+.kl-keys{display:flex;gap:14px;overflow-x:auto}
+.kl-main{flex:1 0 640px;display:flex;flex-direction:column;gap:3px}
+.kl-navpad{flex:0 0 132px;display:flex;flex-direction:column;gap:3px;justify-content:flex-end}
+.kl-row{display:flex;gap:3px}
+.kl-dialog .kl-key{flex:1 1 0;min-width:0;height:38px;padding:2px 3px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;
+  border-radius:4px;border:1px solid #6d737d;background:linear-gradient(#eceef1,#cdd1d7);box-shadow:inset 0 -2px #0000001f;overflow:hidden;text-align:left}
+.kl-key-name{font-size:10px;font-weight:600;color:#30343a}
+.kl-key-command{font-size:8.5px;line-height:1.05;color:#26303c;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.kl-key-blank{flex:1 1 0;height:38px;border-radius:4px;visibility:hidden}
+.kl-key-blank.kl-key-mod{visibility:visible;display:flex;align-items:flex-start;padding:2px 4px;font-size:10px;color:#4b5058;border:1px dashed #80868f;box-sizing:border-box}
+.kl-dialog .kl-key-fixed{opacity:.55}
+.kl-dialog .kl-key.selected{outline:2px solid #2f6db3;outline-offset:0}
+.kl-dialog .kl-key.kl-play,.kl-swatch.kl-play,.kl-legend .kl-play{background:var(--kl-play)}
+.kl-dialog .kl-key.kl-nav,.kl-swatch.kl-nav,.kl-legend .kl-nav{background:var(--kl-nav)}
+.kl-dialog .kl-key.kl-mark,.kl-swatch.kl-mark,.kl-legend .kl-mark{background:var(--kl-mark)}
+.kl-dialog .kl-key.kl-edit,.kl-swatch.kl-edit,.kl-legend .kl-edit{background:var(--kl-edit)}
+.kl-dialog .kl-key.kl-time,.kl-swatch.kl-time,.kl-legend .kl-time{background:var(--kl-time)}
+.kl-dialog .kl-key.kl-win,.kl-swatch.kl-win,.kl-legend .kl-win{background:var(--kl-win)}
+.kl-legend{display:flex;gap:4px;margin-top:5px;flex-wrap:wrap}
+.kl-legend span{font-size:9px;padding:1px 6px;border-radius:3px;border:1px solid #0002}
+.kl-notice{margin:0;padding:4px 10px;min-height:16px;font-size:10px;color:#2f3b4a;background:#c3c7cd;border-bottom:1px solid #8c929d}
+.kl-conflict{display:flex;align-items:center;gap:8px;padding:6px 10px;background:#ead8b0;border-bottom:1px solid #a58d5a;flex-wrap:wrap}
+.kl-conflict>span{flex:1 1 300px}
+.kl-list{flex:1;min-height:120px;overflow:auto;padding:4px 8px 8px;background:#c4c7cc}
+.kl-group h3{display:flex;align-items:center;gap:6px;margin:8px 0 3px;font-size:11px;color:#3b4a60}
+.kl-swatch{display:inline-block;width:10px;height:10px;border-radius:2px;border:1px solid #0003}
+.kl-command{display:grid;grid-template-columns:minmax(180px,1fr) minmax(200px,1.2fr) auto;align-items:center;gap:8px;padding:3px 6px;border-bottom:1px solid #aeb2b9;background:#d0d3d7}
+.kl-command:nth-child(odd){background:#c9ccd1}
+.kl-command.changed{box-shadow:inset 3px 0 #b3873a}
+.kl-label small{margin-left:6px;font-size:8.5px;padding:0 4px;border-radius:2px;background:#e7ddc4;color:#5a4a26;border:1px solid #c4b38a}
+.kl-bindings{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.kl-binding{display:inline-flex;align-items:center;gap:2px;padding:1px 2px 1px 4px;border-radius:3px;background:#e4e6e9;border:1px solid #9aa0a8}
+.kl-dialog .kl-binding button{min-height:16px;padding:0 4px;border:0;background:none;font-size:12px;line-height:1;color:#5a3a3a}
+.kl-dialog .kl-binding button:hover{background:#d9b4b0}
+.kl-chord{display:inline-flex;align-items:center;gap:1px}
+.kl-chord kbd{font:600 10px/1 Consolas,"Segoe UI",monospace;padding:2px 4px;border:1px solid #8b9099;border-bottom-width:2px;border-radius:3px;background:#f5f6f7;color:#25272b}
+.kl-plus{font-size:9px;color:#5b6069;padding:0 1px}
+.kl-warn{font-weight:700;color:#8a3b14;padding:0 2px}
+.kl-none{color:#5d636c;font-style:italic}
+.kl-capture{padding:1px 6px;border-radius:3px;border:1px dashed #2f6db3;background:#dce8f5;color:#1f4a7c;animation:kl-pulse 1s ease-in-out infinite alternate}
+@keyframes kl-pulse{from{opacity:1}to{opacity:.55}}
+@media (prefers-reduced-motion:reduce){.kl-capture{animation:none}}
+.kl-dialog .kl-add{min-height:18px;padding:0 6px;font-weight:700}
+.kl-dialog .kl-reset{min-height:18px;padding:0 6px;font-size:10px}
+.kl-empty{padding:12px;color:#4b5058}
+.kl-unsupported{margin:10px 2px 0;font-size:9.5px;color:#4b5058}
+.kl-footer{display:flex;align-items:center;gap:6px;padding:6px 8px;border-top:1px solid #8c929d;background:linear-gradient(#c2c6ce,#adb2bc);flex-wrap:wrap}
+.kl-spacer{flex:1}
+@media (max-width:700px){
+  .kl-command{grid-template-columns:1fr auto;}
+  .kl-command .kl-bindings{grid-column:1/-1;grid-row:2}
+  .kl-main{flex-basis:560px}
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "adapter_id": "recovered-minimax-h3-2026-10-21",
+  "confirmed": true,
+  "confirmation_note": "Creator explicitly requested live H3 generation using this recovered workflow and the generated test image on 2026-10-21. Inspected mapping and original small render settings retained.",
+  "workflow_sha256": "812001203153166f5bf5238fbd1c82d25278537d1e91d9a172d56dcd52f71c13",
+  "hash_format": "sha256 of UTF-8 JSON with sorted keys, compact separators, ensure_ascii=false",
+  "source_prompt_id": "ee74331c-af0a-499c-a75a-8b011196f397",
+  "capabilities": ["single_image", "shared_first_last_frame", "animated_webp"],
+  "inputs": {
+    "source_image": {"node_id": "4", "class_type": "LoadImage", "input": "image", "type": "STRING", "nonempty": true},
+    "motion_prompt": {"node_id": "5", "class_type": "MiniMaxH3ImageToVideo", "input": "prompt", "type": "STRING", "nonempty": true},
+    "width": {"node_id": "5", "class_type": "MiniMaxH3ImageToVideo", "input": "width", "type": "INT", "min": 32, "max": 16384},
+    "height": {"node_id": "5", "class_type": "MiniMaxH3ImageToVideo", "input": "height", "type": "INT", "min": 32, "max": 16384},
+    "frames": {"node_id": "5", "class_type": "MiniMaxH3ImageToVideo", "input": "length", "type": "INT", "min": 5, "max": 3600},
+    "seed": {"node_id": "8", "class_type": "KSampler", "input": "seed", "type": "INT", "min": 0, "max": 18446744073709551615},
+    "steps": {"node_id": "8", "class_type": "KSampler", "input": "steps", "type": "INT", "min": 1, "max": 10000},
+    "cfg": {"node_id": "8", "class_type": "KSampler", "input": "cfg", "type": "FLOAT", "min": 0, "max": 100},
+    "denoise": {"node_id": "8", "class_type": "KSampler", "input": "denoise", "type": "FLOAT", "min": 0, "max": 1},
+    "filename_prefix": {"node_id": "11", "class_type": "SaveAnimatedWEBP", "input": "filename_prefix", "type": "STRING", "nonempty": true},
+    "fps": {"node_id": "11", "class_type": "SaveAnimatedWEBP", "input": "fps", "type": "FLOAT", "min": 0.01, "max": 1000},
+    "lossless": {"node_id": "11", "class_type": "SaveAnimatedWEBP", "input": "lossless", "type": "BOOLEAN"},
+    "quality": {"node_id": "11", "class_type": "SaveAnimatedWEBP", "input": "quality", "type": "INT", "min": 0, "max": 100}
+  },
+  "output": {"node_id": "11", "class_type": "SaveAnimatedWEBP", "parser": "images_animated_webp", "images_key": "images", "animated_key": "animated", "media_type": "image/webp"},
+  "notes": [
+    "Both first_frame and last_frame currently reference the same source image node; changing source_image preserves these links.",
+    "Width and height declarations expose step 32. H3 length is snapped by the node to its 17k+5 frame grid; requested frame count is not verified encoded duration.",
+    "No negative-prompt string is present. The graph uses ConditioningZeroOut for negative conditioning.",
+    "Recovered Mothman source image and motion prompt are examples from prior work, not approved Last Light Radio canon.",
+    "Captured node dropdowns are compatibility evidence, not proof of model readiness or visual approval."
+  ]
+}

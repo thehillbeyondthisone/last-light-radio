@@ -1,0 +1,80 @@
+{
+  "title": "The Last Lamp",
+  "idea": "A caretaker fixes a lamp. Only at the end do we understand who needed it.",
+  "treatment": "At closing time, a woman tries to light the lamp in an empty harbor office. It dies. Outside, fog erases the water. She could leave, but instead opens a drawer, finds a spare fuse and repairs it. The lamp finally holds. A ferry horn answers from the dark. This wasn't a light she needed to see by. It was a light someone else needed to come home.",
+  "intent": "A tiny act of maintenance becomes an act of care. No speech, no explanatory title, no twist added by narration.",
+  "script": [
+    {
+      "time": "0:00–0:05",
+      "title": "The failure",
+      "frame": "Medium / desk and window",
+      "action": "She has her coat on. One hand already holds the office keys. With the other, she clicks on a brass desk lamp. It glows, then dies. Her eyes go to the dark window.",
+      "sound": "One switch click. A tired electrical tick. Distant water against the quay.",
+      "purpose": "Show a goal, its failure and a reason not to leave in five seconds.",
+      "prompt": "Eye-level medium view inside a small harbor office at night. The woman from the reference image wears her coat and holds office keys in her left hand. She switches on the brass lamp with her right. It glows briefly, then goes dark. She looks toward the window. Locked camera, one uninterrupted shot.",
+      "before": "Coat on; keys in left hand; lamp off; spare fuse in drawer.",
+      "after": "Same positions; lamp has failed; attention shifts to the window.",
+      "risk": "Keep the light failure slow, not strobing. Preserve hand ownership and face."
+    },
+    {
+      "time": "0:05–0:10",
+      "title": "The choice",
+      "frame": "Close / keys and drawer",
+      "action": "She puts the keys down instead of walking out. Her hand opens a shallow drawer. One spare fuse sits inside.",
+      "sound": "Keys settle on wood. Drawer scrape. Wind continues.",
+      "purpose": "Make her choice visible through the abandoned exit, not a facial caption.",
+      "prompt": "Close view of the same desk from the same side. Her left hand places the office keys beside the lamp. Her right hand opens the shallow drawer, revealing one spare fuse in its tray. One simple continuous action, stable camera.",
+      "before": "Keys in hand; fuse in closed drawer.",
+      "after": "Keys on desk; drawer open; fuse visible.",
+      "risk": "Do not let the fuse appear before the drawer opens."
+    },
+    {
+      "time": "0:10–0:15",
+      "title": "A small possibility",
+      "frame": "Close / fuse and face",
+      "action": "She lifts the fuse. Through the window behind her, a weak moving light slips into the fog and disappears. She notices it and turns back to the lamp.",
+      "sound": "A very distant engine. No musical instruction to tell us how to feel.",
+      "purpose": "Introduce another presence before the ending, so the payoff is earned.",
+      "prompt": "Close view of the woman's face and hand holding the spare fuse. A faint distant light beyond the window fades into fog. She glances toward it, then returns her attention to the lamp below frame. Restrained natural movement.",
+      "before": "Keys on desk; fuse in drawer.",
+      "after": "Keys on desk; fuse in her right hand.",
+      "risk": "The outside light is tiny. Avoid asking the model to invent a detailed boat."
+    },
+    {
+      "time": "0:15–0:20",
+      "title": "The repair",
+      "frame": "Insert / lamp base",
+      "action": "The base is already open at the cut. She removes the darkened fuse and seats the spare. The spent fuse is left on the desk.",
+      "sound": "A quiet metal click. Her sleeve brushes the wood.",
+      "purpose": "Show a physical cause for the eventual change, not a magical successful reroll.",
+      "prompt": "Insert of the opened brass lamp base on the established wooden desk. Her fingers remove a darkened fuse, place it beside the base, then fit the spare into the socket. Slow deliberate hands, locked camera.",
+      "before": "Spare in right hand; old fuse installed; base opened across motivated cut.",
+      "after": "Spare installed; spent fuse on desk; keys remain beside lamp.",
+      "risk": "Hardest shot: two small props and hands. Try practical insert or simpler coverage if generation cannot maintain topology."
+    },
+    {
+      "time": "0:20–0:25",
+      "title": "It holds",
+      "frame": "Return / opening composition",
+      "action": "She closes the base and clicks the switch. The lamp comes on and stays on. She waits a beat before letting herself exhale.",
+      "sound": "Switch click. Steady hum. Wind begins to soften.",
+      "purpose": "Repeat the opening composition so the changed outcome reads instantly.",
+      "prompt": "Return to the opening medium composition. The repaired brass lamp is upright on the desk. She clicks its switch. Warm steady light illuminates her face and the window. She watches it for a moment and relaxes her shoulders.",
+      "before": "Lamp repaired; keys and spent fuse on desk.",
+      "after": "Lamp steadily on; caretaker at desk.",
+      "risk": "Generate from an edited opening reference. Do not independently reinvent the room."
+    },
+    {
+      "time": "0:25–0:30",
+      "title": "The answer",
+      "frame": "Exterior / window across dark water",
+      "action": "From outside, the warm window is a tiny point in the fog. A ferry horn answers. Inside, she pulls out the chair and sits beside the light. Cut to black while it is still shining.",
+      "sound": "One distant ferry horn, then only water. No dialogue.",
+      "purpose": "Reframe the entire scene: she is keeping a route home visible.",
+      "prompt": "Night exterior across still dark harbor water. The established office window glows warmly through thin fog. Inside the distant window, the woman pulls out a chair and sits beside the steady lamp. Gentle water movement. Camera holds.",
+      "before": "Lamp on; caretaker standing by desk.",
+      "after": "Lamp on; caretaker seated; external presence acknowledges light.",
+      "risk": "Do not ask H3 to synthesize the horn in sync with a visible boat. Add chosen sound separately; no boat needed."
+    }
+  ]
+}

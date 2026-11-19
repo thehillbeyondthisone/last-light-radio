@@ -1,0 +1,30 @@
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+runs/
+.local/
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Local credentials and machine-specific configuration
+.env
+.env.*
+!.env.example
+.claude/settings.local.json
+
+# Disposable test libraries (keep committed test fixtures)
+/tests/*/
+!/tests/fixtures/
+
+# Generated renders, screenshots and source backups stay on this machine.
+# This historical source file is required by test_film_gaps.py.
+/artifacts/*
+!/artifacts/gap-backend-20261114/
+/artifacts/gap-backend-20261114/*
+!/artifacts/gap-backend-20261114/before/
+/artifacts/gap-backend-20261114/before/*
+!/artifacts/gap-backend-20261114/before/film.py

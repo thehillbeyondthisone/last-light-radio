@@ -1,0 +1,24 @@
+{
+  "experiment_id": "A03_adult_no_overalls_20261118-011326",
+  "created_at": "2026-11-18T01:13:26.171069",
+  "source_workflow": "C:/Users/thisi/OneDrive/Documents/repos/last-light-radio\\docs\\local-llm-mara-20261115\\A03_adult_no_overalls.workflow.json",
+  "original_filename_prefix": "A02_",
+  "filename_prefix": "A03_adult_no_overalls_20261118-011326_",
+  "changed_inputs": [
+    "MiniMaxH3ImageToVideo.prompt"
+  ],
+  "intended_variable": "Mara without overalls, bare skin, sensual silhouette",
+  "recipe": {
+    "models": {},
+    "reference_images": {}
+  },
+  "planned_start_state": "Mug on counter; Mara has empty hands, seated",
+  "planned_end_state": "Mara at closed rear doors, hand reaching for latch, fully upright, no overalls",
+  "observed_start_state": null,
+  "observed_end_state": null,
+  "status": "prepared",
+  "approval": "candidate",
+  "sequence_name": "adult-sequence",
+  "shot_name": "S01_The_Reveal_No_Overalls",
+  "submitted_workflow_sha256": null
+}

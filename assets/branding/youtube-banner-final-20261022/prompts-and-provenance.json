@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-22",
+  "status": "Upload export prepared and locally verified; actual YouTube upload/publish not performed",
+  "generation_mode": "Built-in image_gen.imagegen for canvas/layout correction",
+  "export_mode": "Adobe social-variations workflow: upload, crop/resize, one-pixel geometric trim, crop preview",
+  "source_banner": "../banner-options-20261021/03-analog-last-light.png",
+  "prompt": "Edit target: the supplied original Last Light Radio analog banner. Create a faithful canvas-extension/layout correction for uploading as YouTube channel artwork. Preserve the exact established visual identity: midnight navy print grain, warm ivory tall condensed lettering, amber analog tuning line and glowing indicator toward the right, subtle skyline and water reflections. Preserve wording exactly. This is not a redesign.\nCRITICAL CANVAS: a full 16:9 WIDESCREEN TV CANVAS, requested resolution 2560 x 1440 pixels. NOT a 5:2 panoramic strip. Add coherent matching midnight textured sky above and navy water/dark background below to achieve 16:9 WITHOUT stretching the existing artwork. Retain existing city and tuning aesthetic.\nCRITICAL CROP SAFETY: the title and motto as one group must be placed at the exact center of the full canvas, a little smaller than in the input. All letters, their glow and punctuation must be inside the middle 50% of image width and middle 16% of image height. At 2560x1440 this is x=640..1920, y=605..835. This leaves generous safety margins inside YouTube's center crop. Main title on ONE line, “LAST LIGHT RADIO”, centered around x1280 y680, maximum total width 1160px and height 110px. Smaller exact motto “Music for places that are still awake.” centered around x1280 y795, maximum width 1120px and height 36px. No other text anywhere. Ensure the full motto's final period fits comfortably. Background/tuning line may extend beyond safe area but no lettering may do so.\nRetain the warm tuning indicator at about 83% of full canvas width. Place skyline around 72% of full canvas height with low water reflections below. No invented store signs, frequencies or lore. Continuous edge-to-edge art, not an image placed inside a card, no black bars, framing, guides, watermark or YouTube UI. Output ONE complete 16:9 upload artwork.",
+  "generated_source": "reframed-artwork-source.png",
+  "upload_file": "last-light-radio-youtube-upload.png",
+  "dimensions": [
+    2560,
+    1440
+  ],
+  "bytes": 4945069,
+  "sha256": "af886da744bd6daecb8c4d3b1fe9be4e85eda583ea2af7f0541532c78dc90d48",
+  "safe_preview": {
+    "file": "mobile-safe-preview.png",
+    "source": "last-light-radio-youtube-upload.png",
+    "pixel_bounds": {
+      "left": 509,
+      "top": 509,
+      "right": 2051,
+      "bottom": 931
+    },
+    "notes": "Conservative integer crop inside the scaled official centered safe area; full title and motto visually verified."
+  },
+  "spec_source": "https://support.google.com/youtube/answer/10456525?hl=en",
+  "export_notes": [
+    "Adobe initial resize metadata reported 2560x1440, but actual PNG was 2560x1441. One bottom row was removed using Adobe geometric crop; final local PNG pixel dimensions verified as exactly 2560x1440.",
+    "export-intermediate-2560x1441.png and all-devices-crop-preview.png are retained intermediate outputs, not the upload files.",
+    "No source banner, profile art or canonical master was overwritten."
+  ]
+}

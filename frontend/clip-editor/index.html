@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f4f5f2">
+  <title>Clip Editor · Last Light Radio</title>
+  <link rel="stylesheet" href="/editor.css">
+  <script type="module" src="/editor.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="brand"><span class="brand-mark" aria-hidden="true"></span> Clip Editor</div>
+      <span class="connection" id="connection">Connecting…</span>
+    </div>
+  </header>
+  <main>
+    <div class="workspace">
+      <section class="panel compose" id="compose" aria-labelledby="compose-title">
+        <div class="panel-heading"><h1 id="compose-title">Generate a clip</h1></div>
+        <form id="generate-form">
+          <fieldset id="generate-controls" disabled>
+            <div class="source">
+              <div class="field-heading"><label for="image-picker">Starting image</label>
+                <button type="button" class="quiet" id="upload-button">Upload image</button>
+                <input id="upload" type="file" accept="image/png,image/jpeg,image/webp,image/avif,image/heic,image/heif,.heic,.heif" hidden>
+              </div>
+              <div class="source-preview">
+                <img id="source-image" alt="" hidden>
+                <button type="button" id="source-empty">
+                  <span class="image-icon" aria-hidden="true"></span>
+                  <strong>Choose an image</strong>
+                  <span>PNG, JPEG, WebP or AVIF</span>
+                </button>
+              </div>
+              <select id="image-picker" aria-label="Saved starting images" hidden></select>
+            </div>
+            <label for="prompt">Motion prompt</label>
+            <textarea id="prompt" rows="3" maxlength="4000" placeholder="Describe what moves in the shot…" required></textarea>
+            <label for="length">Clip length <output id="length-readout" for="length"></output></label>
+            <input id="length" type="range" aria-describedby="length-note">
+            <div class="range-labels"><span id="min-length"></span><span id="max-length"></span></div>
+            <p class="help" id="length-note" hidden></p>
+            <button type="submit" class="primary" id="generate" disabled>Generate clip</button>
+          </fieldset>
+        </form>
+        <p id="generation-message" class="help" role="status" hidden></p>
+      </section>
+
+      <div class="review">
+        <section class="panel viewer" aria-labelledby="viewer-title">
+          <div class="panel-heading"><h2 id="viewer-title">Viewer</h2><span class="meta" id="viewer-label"></span></div>
+          <div class="screen">
+            <video id="viewer" playsinline controls preload="metadata" hidden></video>
+            <div id="viewer-empty"><span class="play-icon" aria-hidden="true"></span><p>Generated clips appear here</p></div>
+          </div>
+          <p id="viewer-message" class="help" role="status" hidden></p>
+          <div id="clip-tools" class="clip-tools" hidden>
+            <div class="field-heading"><label for="frame">Choose a starting frame</label><output id="frame-readout" for="frame"></output></div>
+            <div class="frame-controls">
+              <button type="button" id="frame-prev" class="icon" aria-label="Previous frame">‹</button>
+              <input type="range" id="frame" min="0" value="0" step="1">
+              <button type="button" id="frame-next" class="icon" aria-label="Next frame">›</button>
+            </div>
+            <div class="viewer-actions">
+              <button type="button" id="use-frame">Use frame as starting image</button>
+              <button type="button" id="add" class="primary">Add to sequence</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel library" aria-labelledby="library-title">
+          <div class="panel-heading"><h2 id="library-title">Clips</h2><span id="clip-count" class="meta"></span></div>
+          <div id="jobs"></div>
+          <p class="empty-line" id="clips-empty">Your finished clips stay here for reuse.</p>
+          <div id="clips" class="filmstrip"></div>
+        </section>
+      </div>
+    </div>
+
+    <section class="panel sequence" aria-labelledby="sequence-title">
+      <div class="panel-heading sequence-heading">
+        <div><h2 id="sequence-title">Sequence</h2><span id="sequence-length" class="meta"></span></div>
+        <div class="sequence-actions">
+          <button type="button" id="play-sequence" disabled>Play sequence</button>
+          <button type="button" id="export" disabled>Export MP4</button>
+          <a id="download" class="button primary" download="sequence.mp4" hidden>Download MP4</a>
+        </div>
+      </div>
+      <div id="timeline-empty" class="timeline-empty">Add a clip from the viewer to start your sequence.</div>
+      <ol id="timeline" class="filmstrip"></ol>
+      <div id="edit-tools" class="edit-tools" hidden>
+        <button type="button" id="move-left" disabled>← Move earlier</button>
+        <button type="button" id="move-right" disabled>Move later →</button>
+        <button type="button" id="remove" disabled>Remove</button>
+      </div>
+      <p id="export-status" class="help" role="status" hidden></p>
+    </section>
+    <p id="error" class="notice" role="alert" hidden></p>
+  </main>
+</body>
+</html>

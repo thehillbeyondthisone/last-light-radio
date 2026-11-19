@@ -1,0 +1,32 @@
+// Run: node frontend/checks/browserSelection.check.ts
+import assert from 'node:assert/strict'
+import { emptyBrowserSelection, selectBrowserItem, visibleSourceKeys } from '../src/browserSelection.ts'
+
+const order = ['video:a', 'video:b', 'video:c', 'audio:a', 'still:a']
+const pick = (s: ReturnType<typeof selectBrowserItem>, key: string, modifiers = {}, visible = order) => selectBrowserItem(s, key, visible, modifiers)
+let s = pick(emptyBrowserSelection, 'video:b')
+assert.deepEqual(s.keys, ['video:b'])
+s = pick(s, 'audio:a', { ctrlKey: true })
+assert.deepEqual(s.keys, ['video:b', 'audio:a'])
+s = pick(s, 'video:b', { ctrlKey: true })
+assert.deepEqual(s.keys, ['audio:a'])
+s = pick(s, 'still:a', { metaKey: true })
+assert.deepEqual(s.keys, ['audio:a', 'still:a'])
+s = pick(s, 'video:c')
+assert.deepEqual(s.keys, ['video:c'])
+s = pick(s, 'video:a', { shiftKey: true })
+assert.deepEqual(s.keys, ['video:a', 'video:b', 'video:c'])
+assert.equal(s.anchor, 'video:c')
+s = pick(s, 'audio:a', { shiftKey: true })
+assert.deepEqual(s.keys, ['video:c', 'audio:a'], 'changing the range keeps the original anchor')
+s = pick(s, 'still:a', { ctrlKey: true })
+s = pick(s, 'video:b', { ctrlKey: true, shiftKey: true })
+assert.deepEqual(s.keys, ['video:c', 'audio:a', 'still:a', 'video:b'], 'additive ranges keep prior selections without duplicates')
+assert.deepEqual(pick(s, 'video:a', { shiftKey: true }, ['video:a']).keys, ['video:a'], 'a hidden anchor starts a new selection')
+assert.deepEqual(pick(emptyBrowserSelection, 'video:b', { shiftKey: true }).keys, ['video:b'])
+assert.deepEqual(pick(pick(emptyBrowserSelection, 'video:a'), 'still:a', { shiftKey: true }, ['video:a', 'still:a']).keys, ['video:a', 'still:a'], 'folded/filtered rows are excluded from ranges')
+assert.deepEqual(pick(pick(emptyBrowserSelection, 'video:a'), 'still:a', { shiftKey: true }, [...order].reverse()).keys, [...order].reverse(), 'ranges follow the current displayed sort')
+assert.deepEqual(visibleSourceKeys({ keys: ['video:a', 'audio:a', 'sequence:a', 'video:deleted'], anchor: 'video:a' }, ['audio:a', 'still:a']), ['audio:a'], 'bulk bin operations exclude hidden/deleted sources and sequences')
+assert.deepEqual(pick(pick(emptyBrowserSelection, 'video:a'), 'audio:a', { ctrlKey: true }).keys, ['video:a', 'audio:a'], 'equal ids in different media libraries remain distinct')
+assert.deepEqual(emptyBrowserSelection, { keys: [], anchor: null }, 'the shared empty state stays immutable')
+console.log('16 browser selection checks passed')

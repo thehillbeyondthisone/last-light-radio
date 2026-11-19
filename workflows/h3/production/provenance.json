@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "recovered_at": "2026-10-21",
+  "source_path": "D:/LastLightRadioMedia/candidates/1/workflow.json",
+  "raw_sha256": "bffa313797075b91bda1e7bca76890a1599058b13b9c77edfc586ca1b609dadf",
+  "workflow_sha256": "020683e17945a85c24a50df815027ace1946e89f9bb359eac757633de92ab839",
+  "source_candidate_id": 1,
+  "status": "creator_authorized_restore",
+  "originals_preserved": true,
+  "uncertainties": [
+    "Original revision-2 color correction and endpoint blend policy are not recoverable from stored metadata."
+  ]
+}

@@ -1,0 +1,61 @@
+LAST LIGHT RADIO - DIGEST FINDINGS (2026-10-23)
+
+Decision: keep native take comparison and the CozyClay package importer. Keep
+physical-control playback experimental until its joins and persistent states
+are approved. No additional application runtime is needed for Sprite H3.
+
+1. TAKE REVIEW / SPRITE H3
+Sprite H3's useful pattern is action -> candidate takes -> human approval ->
+pinned assets. Its Comfy workflow is not a drop-in replacement for ours.
+Integrated compatible-take selection, shared playback, exact frame stepping,
+scrubbing, loop/exit-hold/pose comparisons, seed/revision/status and advisory
+seam measurements into the existing Viewer. Shorter clips hold their own exit.
+Decode concurrency is bounded; scrubbing coalesces requests. Approval stays
+manual. Real media and unequal-duration browser fixtures passed.
+
+2. PHYSICAL CONTROL
+Two original OFF/ON plates produced two successful local INT8 H3 candidates,
+each 39 frames at 24fps. Ordinary JavaScript finishes each transition, honors
+the latest requested state and holds its decoded exit. Rapid inputs passed.
+All 78 lossless frames preserved 520,285 protected pixels per frame. Decoded
+joins differ slightly (ROI mean RGB differences 1.7803 and 1.8075 / 255).
+The 6.25-second cycle passed full decoding/timestamps. Both takes remain
+unapproved. Continuous knobs and production persistent-state editing were
+not tested. The original moss-controls live demo itself was not verified.
+
+3. COZYCLAY -> LOCAL H3
+Tested actual CozyClay 3.1.2 with original primitive geometry. Fixed a hidden
+proxy's missing pick ID causing unrelated scene nodes to move during export;
+the isolated patch and upstream source are preserved. Two 124-frame exports
+matched every pixel hash, with 39 distinct frames, fixed camera within 1e-12
+numeric tolerance, and unchanged source document/playhead.
+The new import-only adapter validates the native ZIP/endpoints/timing/camera,
+preserves source provenance before hashing and never submits or approves.
+One adapted H3 take completed 124 frames at 24fps / 1920x1080 in 199.444s.
+It moves right, reaches the stop and returns, with timing differences. All
+124 lossless frames preserved 1,902,885 protected pixels per frame; source
+and output decoding/timestamps and paired playback/exit holds passed.
+The graph receives first/last images and text, not reference video, depth or
+normals. Exact interior trajectories, moving cameras, human contact/IK and
+rigged-character quality remain unproven. CozyClay stays separate; its AGPL
+source/notices are retained, restricted FBX rigs excluded, and its isolated
+packages add no Last Light Radio dependency.
+
+VERIFICATION / PRESERVATION
+Initial GPU-free state-cycle experiments passed six scheduling scenarios,
+including deterministic 10-minute cycles and missing/incompatible returns.
+25 targeted tests passed. Final suite: 201 tests, 200 passed, one Windows
+symlink-permission skip; frontend build and 58 Python-file checks passed.
+Exactly three trial H3 jobs succeeded; none was approved. Production remains
+four masters, 25 candidates, eight approvals and 16 jobs, with all source
+hashes unchanged. Audio, shared-world authoring and long-form reliability
+remain separate unfinished work.
+
+PAGES (local servers must be running)
+Editor / Compare takes: http://127.0.0.1:8765/
+Interactive H3 button: http://127.0.0.1:8879/
+CozyClay versus H3: http://127.0.0.1:8880/
+Native CozyClay fixture: http://127.0.0.1:5188/llr-trial.html
+
+Detailed results/reproduction: artifacts/digest-trials-20261023/README.md
+Initial source assessment: artifacts/digest-20261023/README.md

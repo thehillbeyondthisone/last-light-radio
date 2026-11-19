@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-21",
+  "mode": "Built-in image_gen.imagegen",
+  "status": "Proposed branding concepts for creator selection; not approved canon or final upload exports",
+  "brand_sources": [
+    "PROJECT_TRUTHS.md: Last Light Radio name, exact motto, cozy PS1/SNES-inspired visual direction"
+  ],
+  "reference": {
+    "path": ".local/studio/masters/42504de3fff2a4f9d4fbb8593d35f96491be2970375ca9a527cc9303f5a19e0b/MASTER.png",
+    "sha256": "42504de3fff2a4f9d4fbb8593d35f96491be2970375ca9a527cc9303f5a19e0b",
+    "role": "Visual reference for option 1 only, original unchanged"
+  },
+  "youtube_spec_source": "https://support.google.com/youtube/answer/10456525?hl=en",
+  "youtube_specs": {
+    "recommended_dimensions": [
+      2560,
+      1440
+    ],
+    "minimum_dimensions": [
+      2048,
+      1152
+    ],
+    "safe_text_area_at_minimum": [
+      1235,
+      338
+    ],
+    "max_file_megabytes": 6
+  },
+  "options": [
+    {
+      "slug": "01-window-after-dark",
+      "name": "Window After Dark",
+      "prompt": "Use case: ads-marketing. Create ONE finished YouTube channel banner for LAST LIGHT RADIO, a connected late-night lo-fi world. Output a single 2560 x 1440 pixel 16:9 image, no mockup, no contact sheet.\nInput image: supporting VISUAL REFERENCE ONLY for existing world aesthetic and palette. Do not overwrite or exactly duplicate the canonical scene. Create a new banner composition.\nDIRECTION 1 — WINDOW AFTER DARK: cinematic, meticulously crafted cozy pixel illustration inspired by 1990s console background art, chunky intentional pixels and atmospheric depth. Warm amber apartment light frames a rainy midnight-blue city seen through a broad window. Reading nook, book spines, modest vintage radio with amber tuning light, mug and rain reflections relate to the reference. Keep decorations as peripheral framing, not competing focal points. No new people or animals. Night navy, slate teal and golden amber, quiet and intimate, beautifully restrained.\nCRITICAL YOUTUBE COMPOSITION: full canvas 2560 x 1440. ALL text must fit within a central rectangle x=600..1960, y=565..865. The narrow horizontal center must work alone as the mobile banner. Render the exact title “LAST LIGHT RADIO” in one readable line centered near y=675 in warm ivory, with tasteful tall retro block lettering, width around 1200 px and height about 130 px. Under it, center the exact sentence “Music for places that are still awake.” near y=805, width under 1100 px, clean smaller legible type. Typography must be crisp, professionally spaced and unobscured by rain, architecture or props. Behind text keep a quiet dark-blue window area, with soft natural contrast. Composition should feel like a beautifully designed channel identity, not generic neon cyberpunk. Fill upper/lower canvas with coherent scenery for TV view, no blank margins.\nExact text ONLY: “LAST LIGHT RADIO” and “Music for places that are still awake.” No other lettering, no frequencies, no invented lore, no station names, no dates, no logos, no watermark, no frames or crop guides. This is a proposed branding concept, not new canon.",
+      "file": "01-window-after-dark.png",
+      "actual_dimensions": [
+        1672,
+        941
+      ],
+      "source_filename": "exec-0a6ace9a-fd89-4e61-94db-0d2f8499a7e7.png"
+    },
+    {
+      "slug": "02-midnight-neighborhood",
+      "name": "Midnight Neighborhood",
+      "prompt": "Use case: ads-marketing. Create ONE finished YouTube channel banner for LAST LIGHT RADIO, a connected fictional lo-fi neighborhood. Single 2560 x 1440 pixel 16:9 image, no mockup, no contact sheet.\nDIRECTION 2 — MIDNIGHT NEIGHBORHOOD: original expansive pixel-art streetscape at night, looking across a rain-wet intersection into a layered neighborhood of low-rise apartments, tiny glowing windows, modest storefront glow and distant silhouettes. Cozy PS1/SNES-inspired illustration with deliberate square pixel texture, expressive limited palette and nuanced cinematic depth. Stormy indigo and deep teal, muted violet reflections, pockets of warm amber. The street feels quietly inhabited through lit windows, with no visible people, vehicles, animals or invented story events. No readable shop signage, no specific store branding. Main identity is a calm wide night sky and shadowed architecture surrounding beautifully restrained typography.\nCRITICAL YOUTUBE COMPOSITION: full canvas 2560 x 1440. ALL text must fit inside the central x=600..1960, y=565..865 rectangle. Compose title and motto as one centered unit in a quiet dark atmospheric gap between building silhouettes, with the luminous streets and building detail extending across the lower canvas, above/below text. Exact title “LAST LIGHT RADIO” on ONE LINE centered near y=675, width about 1200 px, height about 125 px, sophisticated broad geometric retro sans in soft warm ivory with tiny restrained amber offset. Center exact motto “Music for places that are still awake.” near y=805, readable understated light ivory smaller type, width under 1100 px. No text outside this center-safe block; mobile crop must read beautifully. No illustrated objects intersect letters. High contrast without a solid rectangular label. Edge-to-edge scenery, rich but not busy.\nText ONLY: “LAST LIGHT RADIO” and “Music for places that are still awake.” No frequencies, UMBRA, route numbers, dates, other lettering, new logos, watermark, border or crop guides. A proposed branding concept, no canon assertion.",
+      "file": "02-midnight-neighborhood.png",
+      "actual_dimensions": [
+        1983,
+        793
+      ],
+      "source_filename": "exec-78265b59-d6a4-4732-b3c4-372a9dff8c6c.png"
+    },
+    {
+      "slug": "03-analog-last-light",
+      "name": "Analog Last Light",
+      "prompt": "Use case: ads-marketing. Create ONE finished YouTube channel banner for LAST LIGHT RADIO. Single 2560 x 1440 pixel 16:9 image, no mockup or contact sheet.\nDIRECTION 3 — ANALOG LAST LIGHT: distinctive premium vintage radio identity, very restrained graphic composition rather than another room or street illustration. Deep nearly-black midnight navy backdrop with fine aged paper and subtle halftone grain. An elegant amber-glowing analog radio tuning line runs horizontally through the background at mid-height, with sparse unnumbered tuning ticks and a small illuminated tuning needle positioned beyond the title to the right. Delicate soft horizontal radio glow, a few understated warm particles, lots of quiet negative space. A subtle pixel-stepped distant skyline along the lower quarter ties it to a cozy late-night lo-fi world. No central object clutter, no physical device product shot. Palette: warm cream, oxidized copper and honey amber on midnight ink. Quiet, timeless, strong brand recognition at small size.\nCRITICAL YOUTUBE COMPOSITION: full 2560 x 1440 canvas. ALL text stays inside center x=600..1960, y=565..865. Center the exact title “LAST LIGHT RADIO” on one line near y=675, approximately 1200 px wide and 130 px tall. Typography is beautifully crafted condensed vintage broadcast sans, warm ivory, exquisite optical spacing. Center exact sentence “Music for places that are still awake.” near y=805, smaller refined monospaced or clean sans lettering, warm muted ivory, width below 1100px. Keep tuning line and ticks subtle and behind/around the typography with no legibility interference. Center strip alone must work perfectly as a mobile banner. No artwork label, no outer border. Background fills entire canvas with rich subdued texture.\nExact text ONLY: “LAST LIGHT RADIO” and “Music for places that are still awake.” No tuning numbers, frequencies, additional copy, station names, initials, dates, UMBRA, watermark, UI or crop guides. This is a proposed identity direction, not approved canon.",
+      "file": "03-analog-last-light.png",
+      "actual_dimensions": [
+        1983,
+        793
+      ],
+      "source_filename": "exec-3447d19f-b42a-48f3-ab55-49ddfde170f8.png"
+    }
+  ]
+}

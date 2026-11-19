@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-22",
+  "mode": "Built-in image_gen.imagegen",
+  "status": "Exploratory fictional radio-personality profile concepts, pending creator selection; not approved world canon",
+  "reference": {
+    "role": "Banner palette, print grain and atmosphere only",
+    "path": "../youtube-banner-final-20261022/last-light-radio-youtube-upload.png",
+    "sha256": "af886da744bd6daecb8c4d3b1fe9be4e85eda583ea2af7f0541532c78dc90d48"
+  },
+  "constraints": [
+    "No lettering, name, initials, frequency labels or slogans in artwork",
+    "A fictional identity; no actual recognizable person",
+    "Keep the established midnight navy, warm ivory and amber palette",
+    "Preserve prior branding assets and canonical masters"
+  ],
+  "options": [
+    {
+      "slug": "01-night-operator",
+      "name": "Night Operator",
+      "prompt": "Use case: stylized-concept. Asset type: Last Light Radio channel profile image.\nCreate ONE original square avatar concept for a fictional late-night radio identity. The creative cue is a quietly eccentric, enigmatic but friendly source of late-night music, a personality that feels like it could inhabit a cozy fictional radio world. It should feel distinctive, warm and a little strange, never threatening or goofy.\nInput image 1 is ONLY a brand palette, grain and atmosphere reference. Preserve its midnight navy, warm ivory, aged copper and amber light. Do not put the banner itself in the avatar.\nStyle: polished illustrated brand portrait with restrained vintage print grain, deliberate bold shapes, beautifully controlled amber light, strong silhouette. Atmospheric, intimate, quietly playful. Avoid photographic realism, clutter, glossy 3D rendering and neon cyberpunk. At most one central character or entity.\nComposition: one square image, requested 1024x1024. Entire meaningful subject fits inside a centered circle of radius 390 on a 1024 canvas, with dark breathing room around it. Large central subject, legible as a tiny circular channel avatar. Opaque midnight navy edge-to-edge background.\nText: NONE. No words, letters, names, initials, numerals, frequency labels, slogan, signatures, watermarks, UI or mockup. No actual recognizable person. This is an exploratory branding illustration, not an assertion of approved story canon.\nDIRECTION: a single fictional adult late-night radio host in a close head-and-shoulders portrait, three-quarter view. Gender-ambiguous appearance, distinctive unruly soft dark hair, chunky old studio headphones and a loose dark high collar. A compact pair of round smoked glasses catches tiny amber reflections; the rest of the face is softly readable in warm light, with a small knowing, relaxed smile. No exposed glowing supernatural eyes. Friendly but enigmatic, like the unhurried person selecting records after everyone else has gone to sleep. A small warm pool of light rises from below, with a faint amber circle behind the head. Keep facial forms and headphones bold and simple, personality in the silhouette. No microphone, desk or background scenery; focus on this one memorable face.",
+      "file": "01-night-operator.png",
+      "actual_dimensions": [
+        1254,
+        1254
+      ],
+      "source_filename": "exec-688e0b40-c91b-45df-af7f-2d6b432a639b.png"
+    },
+    {
+      "slug": "02-radio-familiar",
+      "name": "Radio Familiar",
+      "prompt": "Use case: stylized-concept. Asset type: Last Light Radio channel profile image.\nCreate ONE original square avatar concept for a fictional late-night radio identity. The creative cue is a quietly eccentric, enigmatic but friendly source of late-night music, a personality that feels like it could inhabit a cozy fictional radio world. It should feel distinctive, warm and a little strange, never threatening or goofy.\nInput image 1 is ONLY a brand palette, grain and atmosphere reference. Preserve its midnight navy, warm ivory, aged copper and amber light. Do not put the banner itself in the avatar.\nStyle: polished illustrated brand portrait with restrained vintage print grain, deliberate bold shapes, beautifully controlled amber light, strong silhouette. Atmospheric, intimate, quietly playful. Avoid photographic realism, clutter, glossy 3D rendering and neon cyberpunk. At most one central character or entity.\nComposition: one square image, requested 1024x1024. Entire meaningful subject fits inside a centered circle of radius 390 on a 1024 canvas, with dark breathing room around it. Large central subject, legible as a tiny circular channel avatar. Opaque midnight navy edge-to-edge background.\nText: NONE. No words, letters, names, initials, numerals, frequency labels, slogan, signatures, watermarks, UI or mockup. No actual recognizable person. This is an exploratory branding illustration, not an assertion of approved story canon.\nDIRECTION: one small fictional radio-headed broadcaster creature in a close centered bust portrait. Its rounded rectangular vintage receiver head is the character: a wide simple amber-lit analog tuning window, a softly glowing round amber tuning knob offset to one side, and three broad ivory speaker slots below that suggest a gentle expression without cartoon eyeballs. It wears chunky old studio headphones and a plain dark jacket with a softly oversized collar. A subtle tilted-head gesture gives it a quietly curious personality. Make the receiver head beautifully proportioned, a touch odd and endearing, like a late-night signal given a physical identity. The dial light should echo the reference banner's amber tuning indicator. Bold silhouette, warm ivory edges, dark navy body, slight aged paper texture. No miniature labels, no extra objects, no symbols floating around the figure.",
+      "file": "02-radio-familiar.png",
+      "actual_dimensions": [
+        1254,
+        1254
+      ],
+      "source_filename": "exec-0f584b62-5a5b-4245-b010-adf77a0bbd7b.png"
+    },
+    {
+      "slug": "03-signal-spirit",
+      "name": "Signal Spirit",
+      "prompt": "Use case: stylized-concept. Asset type: Last Light Radio channel profile image.\nCreate ONE original square avatar concept for a fictional late-night radio identity. The creative cue is a quietly eccentric, enigmatic but friendly source of late-night music, a personality that feels like it could inhabit a cozy fictional radio world. It should feel distinctive, warm and a little strange, never threatening or goofy.\nInput image 1 is ONLY a brand palette, grain and atmosphere reference. Preserve its midnight navy, warm ivory, aged copper and amber light. Do not put the banner itself in the avatar.\nStyle: polished illustrated brand portrait with restrained vintage print grain, deliberate bold shapes, beautifully controlled amber light, strong silhouette. Atmospheric, intimate, quietly playful. Avoid photographic realism, clutter, glossy 3D rendering and neon cyberpunk. At most one central character or entity.\nComposition: one square image, requested 1024x1024. Entire meaningful subject fits inside a centered circle of radius 390 on a 1024 canvas, with dark breathing room around it. Large central subject, legible as a tiny circular channel avatar. Opaque midnight navy edge-to-edge background.\nText: NONE. No words, letters, names, initials, numerals, frequency labels, slogan, signatures, watermarks, UI or mockup. No actual recognizable person. This is an exploratory branding illustration, not an assertion of approved story canon.\nDIRECTION: one abstract, friendly fictional radio-signal spirit, a compact soft-edged head-and-shoulders silhouette formed from dark midnight ink. Its defining feature is a single horizontal amber analog tuning scale across the face, with five thick ivory ticks and one bright warm amber needle, suggesting an enigmatic visor rather than normal eyes. Oversized simple studio headphones frame its rounded head. A gently crooked posture gives it a little charming eccentricity. Its shoulders fade softly into the navy background; the face stays mostly quiet darkness, with a hint of a small relaxed ivory mouth. A restrained amber rim light outlines the head. Cozy mysterious broadcaster emblem, not an angry robot, hooded villain or horror ghost. Very few shapes; vivid amber dial reads at small size. No other objects or floating musical symbols.",
+      "file": "03-signal-spirit.png",
+      "actual_dimensions": [
+        1254,
+        1254
+      ],
+      "source_filename": "exec-f0016080-f26e-499d-bb59-5cb2b800cd74.png"
+    }
+  ]
+}

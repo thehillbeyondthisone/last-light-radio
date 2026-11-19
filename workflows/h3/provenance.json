@@ -1,0 +1,59 @@
+{
+  "retrieved_at_utc": "2026-10-21T05:49:23.3685106Z",
+  "server": "http://192.168.1.168:8188",
+  "source_endpoint": "/history/ee74331c-af0a-499c-a75a-8b011196f397",
+  "prompt_id": "ee74331c-af0a-499c-a75a-8b011196f397",
+  "status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "ee74331c-af0a-499c-a75a-8b011196f397",
+          "timestamp": 1792508749826
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "ee74331c-af0a-499c-a75a-8b011196f397",
+          "timestamp": 1792508750547
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "ee74331c-af0a-499c-a75a-8b011196f397",
+          "timestamp": 1792509525925
+        }
+      ]
+    ]
+  },
+  "api_workflow_sha256": "b32cdde4361006b82cd4fc9e39484a9106c53eba0d76de0fe8708323a255c556",
+  "has_editor_workflow": false,
+  "missing_node_classes": [],
+  "output_nodes": {
+    "11": {
+      "images": [
+        {
+          "filename": "custom-ac2c1489-5327-4e3f-8382-8f83e6023631_00001_.webp",
+          "subfolder": "LivingTable",
+          "type": "output",
+          "metadata": {
+            "kind": "image",
+            "width": 384,
+            "height": 480
+          },
+          "id": "82fa8ec7-ac34-49a2-9d8c-bba092cc47bf"
+        }
+      ],
+      "animated": [
+        true
+      ]
+    }
+  },
+  "source_input_files_copied": false,
+  "submitted_new_job": false
+}

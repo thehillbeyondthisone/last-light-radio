@@ -1,0 +1,195 @@
+{
+  "2": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "3": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "4": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_int8_convrot.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+      "strength_model": 1
+    }
+  },
+  "6": {
+    "class_type": "MiniMaxH3ImageToVideo",
+    "inputs": {
+      "clip": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        0
+      ],
+      "first_frame": [
+        "18",
+        0
+      ],
+      "prompt": "One cinematic shot inside the EXACT camper van in the first frame. Mara remains seated holding her cream mug in both hands. She turns her eyes toward the rectangular window at SCREEN LEFT. Outside THROUGH THAT WINDOW, in the distant misty trees, a small adult man in a dark charcoal outdoor jacket stands motionless, partly obscured by a tree trunk. The man is OUTSIDE the van at least fifteen metres away, seen naturally through the glass; he does not enter the van. The camera slowly pans LEFT and moves a little closer to the existing window, letting Mara move toward the right edge of the frame while keeping the cream curtain and window frame visible around the forest view. By the end the window and the distant man are clearly readable. She notices him and becomes alert. Keep exact curly-haired woman, rust headband, ochre shirt, denim overalls and mug; keep same van furniture, rear doors, kettle and dawn light. No cut, no headshot only, show the man through the actual window. Natural birds and a distant twig noise, no speech, no music, no titles.",
+      "width": 672,
+      "height": 384,
+      "length": 192
+    }
+  },
+  "7": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "conditioning": [
+        "6",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 2026111701
+    }
+  },
+  "9": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "res_multistep"
+    }
+  },
+  "10": {
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "scheduler": "simple",
+      "steps": 8,
+      "denoise": 1
+    }
+  },
+  "11": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "8",
+        0
+      ],
+      "guider": [
+        "7",
+        0
+      ],
+      "sampler": [
+        "9",
+        0
+      ],
+      "sigmas": [
+        "10",
+        0
+      ],
+      "latent_image": [
+        "6",
+        1
+      ]
+    }
+  },
+  "12": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "15",
+        0
+      ],
+      "vae": [
+        "4",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "12",
+        0
+      ],
+      "fps": 24,
+      "bit_depth": 8,
+      "color_space": "sRGB",
+      "codec": "none",
+      "audio": [
+        "17",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "13",
+        0
+      ],
+      "filename_prefix": "van-action-20261115/A01",
+      "format": "mp4",
+      "format.codec": "h264",
+      "format.codec.encoding": "re-encode",
+      "format.codec.encoding.crf": 20
+    }
+  },
+  "15": {
+    "class_type": "LTXVSeparateAVLatent",
+    "inputs": {
+      "av_latent": [
+        "11",
+        0
+      ]
+    }
+  },
+  "16": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    }
+  },
+  "17": {
+    "class_type": "VAEDecodeAudio",
+    "inputs": {
+      "vae": [
+        "16",
+        0
+      ],
+      "samples": [
+        "15",
+        1
+      ]
+    }
+  },
+  "18": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "van-mara-reference-20261115.png"
+    }
+  }
+}

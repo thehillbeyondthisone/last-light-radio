@@ -1,0 +1,156 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "10": {
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "denoise": 1.0,
+      "model": [
+        "6",
+        0
+      ],
+      "scheduler": "simple",
+      "steps": 8
+    }
+  },
+  "11": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 883101
+    }
+  },
+  "12": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "guider": [
+        "8",
+        0
+      ],
+      "latent_image": [
+        "7",
+        1
+      ],
+      "noise": [
+        "11",
+        0
+      ],
+      "sampler": [
+        "9",
+        0
+      ],
+      "sigmas": [
+        "10",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "12",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "last-light-radio/candidate-000001",
+      "images": [
+        "13",
+        0
+      ]
+    }
+  },
+  "15": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "last-light-radio/candidate-000001/last.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "device": "default",
+      "type": "minimax"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "last-light-radio/candidate-000001/first.png"
+    }
+  },
+  "6": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+      "model": [
+        "1",
+        0
+      ],
+      "strength_model": 1.0
+    }
+  },
+  "7": {
+    "class_type": "MiniMaxH3ImageToVideo",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "first_frame": [
+        "5",
+        0
+      ],
+      "height": 768,
+      "last_frame": [
+        "15",
+        0
+      ],
+      "length": 124,
+      "prompt": "A restrained reading idle: one natural breath, tiny hand and eye motion, book stays open and fixed. Fixed camera. Preserve reader anatomy, cat, room, lighting, and all architecture.",
+      "vae": [
+        "3",
+        0
+      ],
+      "width": 768
+    }
+  },
+  "8": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "conditioning": [
+        "7",
+        0
+      ],
+      "model": [
+        "6",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "res_multistep"
+    }
+  }
+}

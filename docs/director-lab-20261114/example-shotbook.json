@@ -1,0 +1,205 @@
+{
+  "schema": "director.draft.v0",
+  "status": "provisional_not_approved_not_rendered",
+  "title": "The Last Lamp",
+  "brief": "An isolated caretaker repairs a failing lamp; only at the end do we understand someone outside needed it.",
+  "fps": {
+    "num": 24,
+    "den": 1
+  },
+  "duration_frames": 720,
+  "canon_revision": null,
+  "notes": [
+    "Original design fixture, not Last Light Radio canon.",
+    "No model generation, source images, final audio or NLE import performed.",
+    "All six shots are five-second editorial plans; generation handles/capability must be resolved later."
+  ],
+  "characters": [
+    {
+      "id": "caretaker",
+      "identity": "Adult caretaker; identity and wardrobe undecided pending reference board"
+    }
+  ],
+  "locations": [
+    {
+      "id": "room",
+      "description": "One room overlooking dark water; geography to be fixed in reference board"
+    }
+  ],
+  "audio": {
+    "mode": "sound_design",
+    "master": null,
+    "status": "unproduced",
+    "music": "none in first proof"
+  },
+  "shots": [
+    {
+      "id": "S01",
+      "start": 0,
+      "end": 120,
+      "beat": "promise",
+      "purpose": "Establish a lamp that will not stay lit and the caretaker's concern.",
+      "framing": "Medium, locked camera, eye level",
+      "action": "Caretaker turns the old lamp on; it flickers out.",
+      "state_in": {
+        "lamp": "off",
+        "fuse": "in_tray",
+        "caretaker": "at_desk"
+      },
+      "state_out": {
+        "lamp": "off",
+        "fuse": "in_tray",
+        "caretaker": "at_desk"
+      },
+      "sound": "Switch click, electrical sputter, room wind",
+      "risk": "Flicker must not become a rapid flashing effect",
+      "scene_id": "room",
+      "references": {
+        "first_frame": null,
+        "last_frame": null
+      },
+      "review": "draft",
+      "takes": []
+    },
+    {
+      "id": "S02",
+      "start": 120,
+      "end": 240,
+      "beat": "clue",
+      "purpose": "Reveal the spare fuse and make repair a possible choice.",
+      "framing": "Insert, same side of desk axis",
+      "action": "Her hand opens a shallow tray, exposing one brass fuse.",
+      "state_in": {
+        "lamp": "off",
+        "fuse": "in_tray",
+        "caretaker": "at_desk"
+      },
+      "state_out": {
+        "lamp": "off",
+        "fuse": "in_tray",
+        "caretaker": "at_desk"
+      },
+      "sound": "Wooden tray scrape",
+      "risk": "Hand anatomy and single fuse identity",
+      "scene_id": "room",
+      "references": {
+        "first_frame": null,
+        "last_frame": null
+      },
+      "review": "draft",
+      "takes": []
+    },
+    {
+      "id": "S03",
+      "start": 240,
+      "end": 360,
+      "beat": "decision",
+      "purpose": "Show her choosing repair rather than leaving.",
+      "framing": "Medium close, same screen direction",
+      "action": "She picks up the fuse and examines its intact filament.",
+      "state_in": {
+        "lamp": "off",
+        "fuse": "in_tray",
+        "caretaker": "at_desk"
+      },
+      "state_out": {
+        "lamp": "off",
+        "fuse": "in_hand",
+        "caretaker": "at_desk"
+      },
+      "sound": "Coat fabric, wind",
+      "risk": "Do not show replacement yet",
+      "scene_id": "room",
+      "references": {
+        "first_frame": null,
+        "last_frame": null
+      },
+      "review": "draft",
+      "takes": []
+    },
+    {
+      "id": "S04",
+      "start": 360,
+      "end": 480,
+      "beat": "action",
+      "purpose": "Make the repair visible instead of magical.",
+      "framing": "Close on hands and opened lamp base",
+      "action": "She seats the fuse in the socket.",
+      "state_in": {
+        "lamp": "off",
+        "fuse": "in_hand",
+        "caretaker": "at_desk"
+      },
+      "state_out": {
+        "lamp": "off",
+        "fuse": "installed",
+        "caretaker": "at_desk"
+      },
+      "sound": "Metal contact click",
+      "risk": "High hand/prop complexity; may require practical insert",
+      "scene_id": "room",
+      "references": {
+        "first_frame": null,
+        "last_frame": null
+      },
+      "review": "draft",
+      "takes": []
+    },
+    {
+      "id": "S05",
+      "start": 480,
+      "end": 600,
+      "beat": "payoff",
+      "purpose": "Confirm the consequence of her action.",
+      "framing": "Return to opening setup",
+      "action": "She turns the lamp on; warm steady light fills the desk.",
+      "state_in": {
+        "lamp": "off",
+        "fuse": "installed",
+        "caretaker": "at_desk"
+      },
+      "state_out": {
+        "lamp": "on",
+        "fuse": "installed",
+        "caretaker": "at_desk"
+      },
+      "sound": "Switch click, quiet hum",
+      "risk": "Maintain exact desk layout",
+      "scene_id": "room",
+      "references": {
+        "first_frame": null,
+        "last_frame": null
+      },
+      "review": "draft",
+      "takes": []
+    },
+    {
+      "id": "S06",
+      "start": 600,
+      "end": 720,
+      "beat": "meaning",
+      "purpose": "Reveal the light is a beacon, not merely her comfort.",
+      "framing": "Wider view through the window",
+      "action": "She sits beside the light while a distant boat passes in the dark.",
+      "state_in": {
+        "lamp": "on",
+        "fuse": "installed",
+        "caretaker": "at_desk"
+      },
+      "state_out": {
+        "lamp": "on",
+        "fuse": "installed",
+        "caretaker": "at_desk"
+      },
+      "sound": "Distant boat engine, wind softens",
+      "risk": "Geography and window orientation",
+      "scene_id": "room",
+      "references": {
+        "first_frame": null,
+        "last_frame": null
+      },
+      "review": "draft",
+      "takes": []
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_int8_convrot.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "LivingTable/living-table-b91dc8789d2c.jpg"
+    }
+  },
+  "5": {
+    "class_type": "MiniMaxH3ImageToVideo",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "first_frame": [
+        "4",
+        0
+      ],
+      "prompt": "Animate this exact Mothman illustration with a locked camera. One gentle wing flex, slow breathing, and a faint pulse of green radiation around the existing creature and trees. Preserve its anatomy, purple eyes, wing markings, painted colors, framing, and background. No new objects, no camera movement, no text. Ease back to the starting pose.",
+      "last_frame": [
+        "4",
+        0
+      ],
+      "width": 384,
+      "height": 480,
+      "length": 39
+    }
+  },
+  "6": {
+    "class_type": "MiniMaxH3SigmaShift",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "shift_video": 12.0,
+      "shift_audio": 3.0
+    }
+  },
+  "7": {
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
+        "5",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "6",
+        0
+      ],
+      "positive": [
+        "5",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        1
+      ],
+      "seed": 3394130836,
+      "steps": 12,
+      "cfg": 4.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "9": {
+    "class_type": "LTXVSeparateAVLatent",
+    "inputs": {
+      "av_latent": [
+        "8",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "VAEDecodeTiled",
+    "inputs": {
+      "samples": [
+        "9",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "tile_size": 256,
+      "overlap": 64,
+      "temporal_size": 16,
+      "temporal_overlap": 4
+    }
+  },
+  "11": {
+    "class_type": "SaveAnimatedWEBP",
+    "inputs": {
+      "images": [
+        "10",
+        0
+      ],
+      "filename_prefix": "LivingTable/custom-ac2c1489-5327-4e3f-8382-8f83e6023631",
+      "fps": 24.0,
+      "lossless": false,
+      "quality": 90,
+      "method": "default"
+    }
+  }
+}

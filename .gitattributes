@@ -1,0 +1,4 @@
+# Preserve recovered bytes across Windows and other platforms. Master fixtures,
+# workflow provenance and immutable records rely on exact file checksums.
+# This disables newline conversion while retaining normal text diffs.
+* -text

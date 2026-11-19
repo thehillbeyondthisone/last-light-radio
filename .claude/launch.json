@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "film-ui-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "frontend", "run", "dev", "--", "--config", "vite.film-dev.config.ts"],
+      "port": 5199
+    },
+    {
+      "name": "film-ui-test",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "frontend", "run", "dev", "--", "--config", "vite.film-test.config.ts"],
+      "port": 5198
+    }
+  ]
+}

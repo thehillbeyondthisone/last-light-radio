@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-22",
+  "mode": "Built-in image_gen.imagegen",
+  "status": "Proposed cozy channel-profile concepts, pending creator selection; no canon approval",
+  "direction": "Warm lamplight, vintage radio, quiet rain, tea and restful imagery. No lettering or inspiration name.",
+  "reference": {
+    "role": "Palette and late-night atmosphere reference only",
+    "path": "../youtube-banner-final-20261022/last-light-radio-youtube-upload.png",
+    "sha256": "af886da744bd6daecb8c4d3b1fe9be4e85eda583ea2af7f0541532c78dc90d48"
+  },
+  "options": [
+    {
+      "slug": "01-radio-and-tea",
+      "name": "Radio & Tea",
+      "prompt": "Use case: stylized-concept. Asset type: cozy Last Light Radio channel profile picture.\nCreate ONE original square profile image that feels immediately comforting: a quiet personal place to listen to music after dark. Match the supplied banner's midnight navy, honey amber, warm cream and muted wood-brown palette, interpreted with SOFT warm lamplight.\nInput image 1: color and atmosphere reference ONLY. Do not reproduce its typography, skyline layout or tuning line as the whole design.\nVisual style: charming, carefully art-directed hand-painted lo-fi illustration with a little tasteful retro animation-background character. Rounded solid shapes, warm tactile wood and fabric, soft transitions, restrained fine paper texture. Rich amber interior light against blue nighttime shadow. Human warmth and a lived-in feeling. Quietly beautiful, familiar and inviting, not glossy, luxurious or theatrical.\nComposition: requested 1024x1024 square, actual avatar artwork. One strong central motif fills roughly 70 percent of the image; everything essential fits inside a centered circular crop with breathing room. Favor simple clear silhouettes and a few large shapes so the picture stays recognizable at small size. Deep navy opaque background extends edge to edge.\nText: none at all. No names, letters, numbers, initials, frequency labels, logos, watermarks or signatures. No human face, robot, mascot with a radio head, supernatural entity, neon, sparks, headphones, bright halo circle or heavy distressed grunge. One complete image, no variations sheet or mockup. This is a proposed branding concept, not new world canon.\nDirection 1 — RADIO & TEA. A small rounded walnut tabletop radio viewed almost from the front at a very slight three-quarter angle, occupying most of the central circle. A wide softly glowing amber tuning window, one large warm cream tuning knob and a simple broad woven speaker grille define it. NO text or numerical scale. It rests on a small warm wooden surface. A single plain ceramic mug of tea nestles beside the radio in the foreground with one gentle curving wisp of steam, secondary to the receiver. A soft off-canvas bedside lamp casts a warm pool of light across the wood and mug. Background only a soft navy evening gradient with a faint suggestion of rain at a window, no detailed room or skyline. Rounded friendly proportions, simple readable shapes, a slow comfortable evening. Soft natural light, not a shining high-tech device or a product advertisement.",
+      "file": "01-radio-and-tea.png",
+      "actual_dimensions": [
+        1254,
+        1254
+      ],
+      "bytes": 2058341,
+      "sha256": "b3dd8f5e46304ce921ff7b9cf017e488b76dd63925ebc1245809a2f9246431a0",
+      "copy_matches_original": true,
+      "source_filename": "exec-4f9dfd97-89b5-4324-b65d-067fbeb385d9.png"
+    },
+    {
+      "slug": "02-warm-window",
+      "name": "A Window Still Awake",
+      "prompt": "Use case: stylized-concept. Asset type: cozy Last Light Radio channel profile picture.\nCreate ONE original square profile image that feels immediately comforting: a quiet personal place to listen to music after dark. Match the supplied banner's midnight navy, honey amber, warm cream and muted wood-brown palette, interpreted with SOFT warm lamplight.\nInput image 1: color and atmosphere reference ONLY. Do not reproduce its typography, skyline layout or tuning line as the whole design.\nVisual style: charming, carefully art-directed hand-painted lo-fi illustration with a little tasteful retro animation-background character. Rounded solid shapes, warm tactile wood and fabric, soft transitions, restrained fine paper texture. Rich amber interior light against blue nighttime shadow. Human warmth and a lived-in feeling. Quietly beautiful, familiar and inviting, not glossy, luxurious or theatrical.\nComposition: requested 1024x1024 square, actual avatar artwork. One strong central motif fills roughly 70 percent of the image; everything essential fits inside a centered circular crop with breathing room. Favor simple clear silhouettes and a few large shapes so the picture stays recognizable at small size. Deep navy opaque background extends edge to edge.\nText: none at all. No names, letters, numbers, initials, frequency labels, logos, watermarks or signatures. No human face, robot, mascot with a radio head, supernatural entity, neon, sparks, headphones, bright halo circle or heavy distressed grunge. One complete image, no variations sheet or mockup. This is a proposed branding concept, not new world canon.\nDirection 2 — A WINDOW STILL AWAKE. A close, simple illustration of one small apartment window seen from outside at blue night. A rounded warm wood window frame and gently gathered cream curtains surround an inviting pool of honey-colored light. Inside, one small shaded table lamp glows beside a compact wooden radio; these are simple bold shapes, not a detailed dollhouse. The radio's amber tuning window is visible as a small luminous rectangle. Soft blue rain beads on the glass hint at the weather beyond. The window itself is the dominant emblem and occupies most of the avatar circle, with only a narrow midnight-blue wall around it. The mood is being welcomed home and knowing the music is still playing. Keep the framing clean and every shape substantial. No people, animal or busy surrounding buildings. No signage or lettering.",
+      "file": "02-warm-window.png",
+      "actual_dimensions": [
+        1254,
+        1254
+      ],
+      "bytes": 2539149,
+      "sha256": "96e0a33e32f8d462f12f7c54647c6618ec2a4eb40bb7436e1f9d3c97b7b33298",
+      "copy_matches_original": true,
+      "source_filename": "exec-07c90077-ede9-4f73-b5ae-382353e0918b.png"
+    },
+    {
+      "slug": "03-cat-on-radio",
+      "name": "The Sleepy Listener",
+      "prompt": "Use case: stylized-concept. Asset type: cozy Last Light Radio channel profile picture.\nCreate ONE original square profile image that feels immediately comforting: a quiet personal place to listen to music after dark. Match the supplied banner's midnight navy, honey amber, warm cream and muted wood-brown palette, interpreted with SOFT warm lamplight.\nInput image 1: color and atmosphere reference ONLY. Do not reproduce its typography, skyline layout or tuning line as the whole design.\nVisual style: charming, carefully art-directed hand-painted lo-fi illustration with a little tasteful retro animation-background character. Rounded solid shapes, warm tactile wood and fabric, soft transitions, restrained fine paper texture. Rich amber interior light against blue nighttime shadow. Human warmth and a lived-in feeling. Quietly beautiful, familiar and inviting, not glossy, luxurious or theatrical.\nComposition: requested 1024x1024 square, actual avatar artwork. One strong central motif fills roughly 70 percent of the image; everything essential fits inside a centered circular crop with breathing room. Favor simple clear silhouettes and a few large shapes so the picture stays recognizable at small size. Deep navy opaque background extends edge to edge.\nText: none at all. No names, letters, numbers, initials, frequency labels, logos, watermarks or signatures. No human face, robot, mascot with a radio head, supernatural entity, neon, sparks, headphones, bright halo circle or heavy distressed grunge. One complete image, no variations sheet or mockup. This is a proposed branding concept, not new world canon.\nDirection 3 — THE SLEEPY LISTENER. A single peacefully sleeping cream-and-ginger cat curled into a simple soft shape on top of a small rounded wooden vintage radio. The cat's closed eyes, tucked paws and curled tail make a restful comfortable silhouette. The radio below has one wide mellow amber-lit tuning panel and a large plain knob, with a simple woven speaker area. No numbers or text. Cat and radio together form a compact centered emblem, filling the avatar circle comfortably. Gentle shaded lamplight warms the cat's fur and wood; midnight-blue background is quiet and softly painted. Tiny suggestion of a folded knitted blanket beneath the radio, kept broad and simple. Warm and restful, no big cartoon eyes, no headphones or human clothing, no extra props. The cat's fur highlights should be soft warm cream rather than bright orange fire. Friendly relaxed illustration with real cozy charm.",
+      "file": "03-cat-on-radio.png",
+      "actual_dimensions": [
+        1254,
+        1254
+      ],
+      "bytes": 2558549,
+      "sha256": "b8d0c1c2494ae55a0d7b7b00de8603268d4d4b85c013ea7904bf4759d0b44cc3",
+      "copy_matches_original": true,
+      "source_filename": "exec-9f4cba97-5f60-450e-93a4-8d874fd0bf00.png"
+    }
+  ]
+}
