@@ -1,8 +1,14 @@
 # Last Light Radio — PROJECT_TRUTHS.md
 
 **Status:** recovered project direction + current design decisions  
-**Last updated:** 2026-11-19  
+**Last updated:** 2026-11-24
+
 **Purpose:** short, stable source of truth. Change this file only when a decision or a tested fact changes; retain uncertainty explicitly.
+
+## Clip Editor local prompt drafting — 2026-11-24
+
+- **Draft with Local AI** uses a configured loopback chat completions API to draft an editable motion prompt and clip length from written direction. The creator's **Generate clip** action uses the existing H3 workflow. The draft route queues no jobs.
+- Phone-width Chromium verified Bionic's local `qwen2.5-coder-3b-instruct` draft and one Harbinger H3 render using the provisional reading-room still in an isolated library. The saved H3 request exactly matched the draft. The imported 454 × 568 MP4 played in the viewer, and all 124 frames at 24 fps and its stereo audio decoded. Evidence and test MP4 are in `artifacts/local-ai-clip-20261124/`.
 
 ## Separate Clip Editor — 2026-11-19
 

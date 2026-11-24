@@ -340,3 +340,8 @@ The v3 lossless replay also passed all 576 protected-pixel audits (zero changed 
 - [x] Upload → choose length → generate → append. Scrub to a specific frame and use it to generate the next clip. Reorder, reopen, play and export a two-clip cut with sound. Verified over private HTTP using the mock worker and CPU-encoded media.
 - [x] Accept and normalize larger mobile stills. Verified a 48 MP JPEG upload, EXIF orientation, and preservation of the original bytes.
 - [ ] Verify one fresh non-default-length result on the live H3 worker and open the editor from a physical phone.
+
+## Clip Editor local prompt drafting — 2026-11-24
+
+- [x] Draft editable text and a valid clip length with a local model. Offline HTTP coverage includes invalid drafts and verifies drafting creates no render or sequence changes.
+- [x] Draft with local Bionic Qwen, generate one H3 clip, and confirm playback and full decode in an isolated library. Reproduce with **Draft with Local AI** in `README.md` using `assets/test_scene/test_still.png`.

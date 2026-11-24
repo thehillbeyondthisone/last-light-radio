@@ -36,8 +36,11 @@
               </div>
               <select id="image-picker" aria-label="Saved starting images" hidden></select>
             </div>
-            <label for="prompt">Motion prompt</label>
+            <div class="field-heading"><label for="prompt">Motion prompt</label>
+              <button type="button" class="quiet" id="draft" aria-describedby="draft-message" disabled>Draft with Local AI</button>
+            </div>
             <textarea id="prompt" rows="3" maxlength="4000" placeholder="Describe what moves in the shot…" required></textarea>
+            <p id="draft-message" class="help" role="status" hidden></p>
             <label for="length">Clip length <output id="length-readout" for="length"></output></label>
             <input id="length" type="range" aria-describedby="length-note">
             <div class="range-labels"><span id="min-length"></span><span id="max-length"></span></div>

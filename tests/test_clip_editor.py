@@ -8,6 +8,7 @@ import subprocess
 import tempfile
 import threading
 import unittest
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -124,6 +125,55 @@ class ClipEditorTests(unittest.TestCase):
         self.assertEqual(self.http("/api/clips", headers={"Host": "elsewhere.test"})[0], 403)
         self.assertEqual(self.http("/api/clips/images", {}, {"Origin": "http://elsewhere.test"})[0], 403)
         self.assertEqual(self.http("/api/clips/images", {}, {"X-LLR-Client": "other"})[0], 403)
+
+    def test_local_ai_drafts_editor_fields_without_queuing_a_job(self):
+        source = self.call("/api/clips/images", {"filename": "draft.png", "label": "Draft reference",
+                           "image_base64": base64.b64encode(Path("assets/test_scene/test_still.png").read_bytes()).decode()}, 201)
+        inputs = {"first_frame_id": source["id"], "direction": "Blink once with a fixed camera.", "length_frames": 124}
+        self.assertFalse(self.call("/api/clips")["local_ai_configured"])
+        self.call("/api/clips/draft", inputs, 503)
+
+        requests = []
+        draft = {"brief": "Hold the original framing as the reader blinks once.", "length_frames": 96}
+
+        class LocalAI(BaseHTTPRequestHandler):
+            def do_POST(self):
+                body = self.rfile.read(int(self.headers["Content-Length"]))
+                requests.append((self.path, json.loads(body)))
+                output = {"choices": [{"finish_reason": "stop", "message": {"content": json.dumps(draft)}}]}
+                self.send_response(200)
+                self.end_headers()
+                self.wfile.write(json.dumps(output).encode())
+
+            def log_message(self, *_):
+                pass
+
+        server = ThreadingHTTPServer(("127.0.0.1", 0), LocalAI)
+        self.addCleanup(server.server_close)
+        threading.Thread(target=server.serve_forever, daemon=True).start()
+        self.addCleanup(server.shutdown)
+        config = self.library / "local-ai.json"
+        config.write_text(json.dumps({
+            "base_url": f"http://127.0.0.1:{server.server_port}/v1", "model": "test-qwen",
+        }), encoding="utf-8")
+
+        self.assertTrue(self.call("/api/clips")["local_ai_configured"])
+        self.assertEqual(self.call("/api/clips/draft", inputs), {**draft, "model": "test-qwen"})
+        path, request = requests[0]
+        self.assertEqual(path, "/v1/chat/completions")
+        self.assertEqual(request["model"], "test-qwen")
+        self.assertIn(inputs["direction"], request["messages"][1]["content"])
+        self.assertEqual(request["response_format"]["type"], "json_schema")
+        self.call("/api/clips/draft", {**inputs, "direction": " "}, 400)
+        self.assertEqual(len(requests), 1)
+        draft["length_frames"] = 95
+        self.call("/api/clips/draft", inputs, 502)
+        config.write_text('{"base_url":"http://192.0.2.1/v1","model":"test-qwen"}', encoding="utf-8")
+        self.call("/api/clips/draft", inputs, 503)
+        snapshot = self.call("/api/clips")
+        self.assertEqual(snapshot["jobs"], [])
+        self.assertEqual(snapshot["clips"], [])
+        self.assertEqual(snapshot["sequence"]["shots"], [])
 
     def test_large_phone_photo_keeps_original_and_creates_upright_reference(self):
         photo = io.BytesIO()

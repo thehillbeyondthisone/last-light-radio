@@ -106,6 +106,25 @@ The Clip Editor keeps images, jobs, clips and sequence revisions in
 `.local/clip-editor`. The selected starting image and motion prompt are remembered
 by each browser. Launch it once and use the printed address on every device.
 
+### Draft with Local AI
+
+Enable the local model API in Bionic under **Settings → Local Model API** and
+use an installed Qwen model. Put its loopback API address and model ID in
+`.local/clip-editor/local-ai.json`. For example, use the following with Bionic
+running on port 1235. Use your own port and the ID from `/v1/models` if they differ.
+
+```json
+{
+  "base_url": "http://127.0.0.1:1235/v1",
+  "model": "qwen2.5-coder-3b-instruct"
+}
+```
+
+In the Clip Editor, choose a starting image, enter a short direction in
+**Motion prompt**, and click **Draft with Local AI**. The model sees the written
+direction and selected duration. Review or edit the returned prompt and length,
+then click **Generate clip** to send the starting image and prompt to H3.
+
 ## Open the creator studio
 
 Double-click **`quickstart.bat`** in this folder, or run it from PowerShell:

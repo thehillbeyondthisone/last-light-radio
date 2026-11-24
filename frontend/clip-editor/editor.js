@@ -68,6 +68,7 @@ const randomId = () => Array.from(crypto.getRandomValues(new Uint8Array(16)), (n
 function updateControls() {
   const hasClip = activeClip && !playback
   $('generate-controls').disabled = !state || busy
+  $('draft').disabled = !imageById(imageId) || !prompt.value.trim() || !state?.local_ai_configured
   $('generate').disabled = !imageById(imageId) || !prompt.value.trim() || !state?.worker_configured
   $('generate').textContent = warnedCheck ? 'Generate anyway' : 'Generate clip'
   $('clip-tools').hidden = !hasClip
@@ -185,6 +186,9 @@ function drawJobs() {
 function render() {
   $('connection').textContent = !online ? 'Connection lost' : state.worker_configured ? 'Editor connected' : 'ComfyUI setup needed'
   $('connection').dataset.online = String(online)
+  onceChanged('local-ai', state.local_ai_configured ?? false, () => {
+    show('draft-message', state.local_ai_configured ? '' : 'Set up local-ai.json in the Clip Editor library to draft with Local AI.')
+  })
   const recipe = state.recipe
   onceChanged('recipe', recipe, () => {
     length.min = recipe.min_frames
@@ -379,6 +383,23 @@ length.addEventListener('input', () => {
   warnedCheck = undefined
   showLength()
   updateControls()
+})
+$('draft').addEventListener('click', () => {
+  void act(async () => {
+    show('draft-message', 'Drafting with Local AI…')
+    try {
+      const draft = await api('/draft', {
+        first_frame_id: imageId, direction: prompt.value.trim(), length_frames: Number(length.value),
+      })
+      prompt.value = draft.brief
+      length.value = draft.length_frames
+      prompt.dispatchEvent(new Event('input'))
+      length.dispatchEvent(new Event('input'))
+      show('draft-message', 'Draft ready. Review the prompt and length before generating.')
+    } catch (error) {
+      show('draft-message', error.message)
+    }
+  })
 })
 $('generate-form').addEventListener('submit', (event) => {
   event.preventDefault()

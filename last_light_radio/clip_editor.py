@@ -6,7 +6,7 @@ from contextlib import closing, contextmanager
 from ipaddress import IPv4Address, IPv4Network
 from urllib.parse import urlencode
 
-from . import film, film_generation, film_images, h3_joint_av_recipe
+from . import clip_drafting, film, film_generation, film_images, h3_joint_av_recipe
 from .comfy import ComfyClient
 from .server import make_server
 from .studio import ROOT, Studio, StudioError, text
@@ -70,6 +70,7 @@ def snapshot(studio):
         ],
         "recipe": generation["recipe"],
         "worker_configured": bool(generation["worker_url"]),
+        "local_ai_configured": (studio.store.root / clip_drafting.CONFIG_NAME).is_file(),
         **film_images.listing(studio),
     }
 
@@ -132,6 +133,13 @@ def dispatch(handler, studio, parts, payload):
         if route == ["clips", "frames"]:
             imported_clip(studio, payload.get("video_asset_id"))
             return handler.send_json(film_images.from_frame(studio, payload), 201)
+        if route == ["clips", "draft"]:
+            first_frame_id = text(payload.get("first_frame_id"), "Starting image", 100)
+            film_images.verify(studio, first_frame_id)
+            return handler.send_json(clip_drafting.draft(
+                studio.store.root / clip_drafting.CONFIG_NAME, payload.get("direction"),
+                h3_joint_av_recipe.frames(payload.get("length_frames")),
+            ))
         if route == ["clips", "preflight"]:
             check = film_generation.preflight(studio, generation_params(studio, payload))
             check["warnings"] = [w for w in check["warnings"] if w.get("code") != "REFERENCE_UPLOAD_ON_GENERATE"]
